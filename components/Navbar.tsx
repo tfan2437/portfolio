@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import NavLink from "@/components/NavLink";
 import { useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 const Navbar = () => {
   const [isHovering, setIsHovering] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
             alt="avatar"
             width={44}
             height={44}
-            className="rounded-full"
+            className="rounded-full block"
           />
           <div className="flex flex-col">
             <span className="text-xl font-semibold font-inter">
@@ -37,7 +38,7 @@ const Navbar = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          <div className={`${isHovering ? "animate-wave" : ""}`}>
+          <div className={twMerge(isHovering && "animate-wave")}>
             <Image
               src="/waving-hand.png"
               alt="waving-hand"
