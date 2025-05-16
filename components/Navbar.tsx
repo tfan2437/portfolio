@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-10 flex justify-center">
+    <nav className="w-full fixed top-0 left-0 z-10 flex justify-center bg-white">
       <div className="flex justify-between items-center w-full max-w-7xl py-5">
         <Link href="/" className="flex items-center gap-2">
           <Image
