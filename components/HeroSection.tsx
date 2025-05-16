@@ -15,7 +15,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeIn" }}
       >
-        <p className="text-4xl font-semibold leading-12 whitespace-pre-line ">
+        <p className="text-4xl font-semibold leading-12 whitespace-pre-line">
           {`Hey there! I'm Ting Wei. \nI build high-quality websites with \nmodern tech expertise.`}
         </p>
 

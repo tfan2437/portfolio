@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import AnimationSeperator from "@/components/AnimationSeperator";
 import ProjectSection from "@/components/ProjectSection";
 import AboutSection from "@/components/AboutSection";
+import FooterSection from "@/components/FooterSection";
 
 const home = () => {
   return (
@@ -14,6 +15,7 @@ const home = () => {
       <AnimationSeperator />
       <AboutSection />
       <ProjectSection />
+      <FooterSection />
     </div>
   );
 };

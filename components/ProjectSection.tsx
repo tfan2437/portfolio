@@ -1,8 +1,13 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "motion/react";
 import ProjectCard from "./ProjectCard";
 
 const ProjectSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.1 });
+
   return (
     <div className="w-full flex flex-col items-center">
       <div className="w-full flex flex-col max-w-7xl mb-[200px]">
@@ -18,9 +23,24 @@ const ProjectSection = () => {
             <span className="text-sm text-neutral-700">Fullstack Web</span>
           </div>
         </div>
-        <div className="w-full grid grid-cols-2 gap-x-6 gap-y-8 select-none">
+        <div
+          ref={ref}
+          className="w-full grid grid-cols-2 gap-x-6 gap-y-8 select-none"
+        >
           {Array.from({ length: 6 }).map((_, index) => (
-            <ProjectCard key={index} index={index} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1, // Stagger the animations
+                ease: "easeOut",
+              }}
+              className="w-full h-auto"
+            >
+              <ProjectCard index={index} />
+            </motion.div>
           ))}
         </div>
       </div>
