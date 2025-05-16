@@ -2,18 +2,15 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-
+import { SparkleIcon } from "./sparkle-icon";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
   speed = "fast",
-  pauseOnHover = true,
+  pauseOnHover = false,
   className,
 }: {
-  items: {
-    path: string;
-  }[];
+  items: string[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -25,6 +22,7 @@ export const InfiniteMovingCards = ({
   useEffect(() => {
     addAnimation();
   }, []);
+
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -72,32 +70,25 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
+          "flex w-max min-w-full shrink-0 flex-nowrap gap-4",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item) => (
+        {items.map((item, index) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] p-2 md:w-[450px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
-            key={item.path}
+            className="relative w-fit rounded-2xl p-2 flex flex-row gap-[6px] items-center select-none"
+            key={index}
           >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-              <p className="text-sm leading-[1.6] font-normal text-neutral-800 dark:text-gray-100">
-                {item.path}
-              </p>
-            </blockquote>
+            <SparkleIcon className="size-[14px] text-green" />
+            <p className="text-sm font-medium text-white">{item}</p>
           </li>
         ))}
       </ul>
