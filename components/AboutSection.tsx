@@ -7,7 +7,10 @@ import { EDUCATION, JOBS } from "@/constants/about";
 
 const AboutSection = () => {
   return (
-    <div className="w-full flex flex-col items-center my-[200px] ">
+    <div
+      id="about"
+      className="w-full flex flex-col items-center pb-[200px] pt-[150px]"
+    >
       <div className="w-full flex flex-row justify-between max-w-7xl gap-32">
         <div className="flex flex-col w-1/2">
           <AboutIntro />

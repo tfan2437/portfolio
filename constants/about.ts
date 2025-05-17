@@ -2,6 +2,7 @@ export type Education = {
   school: string;
   degree: string;
   date: string;
+  image: string;
 };
 
 export type Job = {
@@ -17,16 +18,19 @@ export const EDUCATION: Education[] = [
     school: "Georgia Institute of Technology",
     degree: "Online Master of Science in Computer Science",
     date: "Jan 2025 - Present",
+    image: "/school-gatech.png",
   },
   {
     school: "Empire State University",
     degree: "Master Prerequisite - Computer Science",
     date: "Jan 2024 - May 2024",
+    image: "/school-empire.png",
   },
   {
     school: "Cornell University",
     degree: "Bachelor of Architecture",
     date: "June 2016 - Dec 2021",
+    image: "/school-cornell.png",
   },
 ];
 

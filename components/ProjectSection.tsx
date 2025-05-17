@@ -9,7 +9,7 @@ const ProjectSection = () => {
   const isInView = useInView(ref, { once: false, amount: 0.1 });
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div id="projects" className="w-full flex flex-col items-center">
       <div className="w-full flex flex-col max-w-7xl mb-[200px]">
         <div className="flex gap-2 items-center mb-4 w-full justify-between">
           <div className="flex items-center gap-2">

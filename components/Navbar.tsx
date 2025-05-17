@@ -34,9 +34,9 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="flex items-center gap-3">
-          <NavLink href="/about" text="ABOUT" />
-          <NavLink href="/projects" text="PROJECTS" />
-          <NavLink href="/contact" text="CONTACT" />
+          <NavLink href="#about" text="ABOUT" offset={100} />
+          <NavLink href="#projects" text="PROJECTS" offset={100} />
+          <NavLink href="#contact" text="CONTACT" offset={100} />
         </div>
         <div className="flex items-center gap-2">
           <Button variant="link" className="cursor-pointer">

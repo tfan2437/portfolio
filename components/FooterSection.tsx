@@ -17,7 +17,10 @@ const FooterSection = () => {
   };
 
   return (
-    <footer className="w-full flex flex-col items-center bg-black pt-20 pb-6">
+    <footer
+      id="contact"
+      className="w-full flex flex-col items-center bg-black pt-20 pb-6"
+    >
       <div className="w-full max-w-7xl flex flex-col justify-between items-center h-[338px]">
         <div className="w-full flex justify-between items-center">
           <div className="w-full flex h-[200px] justify-between flex-col">

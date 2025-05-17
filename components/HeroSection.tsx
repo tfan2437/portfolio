@@ -8,7 +8,7 @@ const HeroSection = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div className="w-full flex flex-col max-w-7xl">
+    <div id="hero" className="w-full flex flex-col max-w-7xl">
       <div className="w-full h-[88px] mb-40" />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
