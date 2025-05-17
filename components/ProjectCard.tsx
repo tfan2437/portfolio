@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { ArrowUpRightIcon } from "lucide-react";
 
 const ProjectCard = ({ index }: { index: number }) => {
   const router = useRouter();
@@ -21,7 +22,12 @@ const ProjectCard = ({ index }: { index: number }) => {
         />
       </div>
       <div className="w-full flex items-center justify-between mt-3">
-        <h1 className="text-black font-semibold">Project Name</h1>
+        <div className="flex items-center gap-2">
+          <h1 className="text-black font-semibold">Project Name</h1>
+          <div className="flex items-center justify-center p-[2px] bg-green rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500">
+            <ArrowUpRightIcon className="size-4 text-black" />
+          </div>
+        </div>
         <p className="text-sm text-neutral-500 font-light">2025</p>
       </div>
       <p className="text-sm text-neutral-500 mt-1">
