@@ -1,11 +1,21 @@
 import { SONICFI } from "@/constants/project-constants";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "motion/react";
+import { duration, ease } from "@/constants/animation";
 
 const ProjectInfo = () => {
   return (
     <div className="w-full flex flex-col items-center max-w-4xl select-none mt-10 mb-48">
-      <div className="w-full flex flex-col gap-16">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: duration,
+          ease: ease,
+        }}
+        className="w-full flex flex-col gap-16"
+      >
         <Intro
           title={SONICFI.title}
           href={"https://www.orbits-ai.com"}
@@ -24,7 +34,7 @@ const ProjectInfo = () => {
 
         <Conclusion title="Achievements" paragraphs={SONICFI.achievements} />
         <Conclusion title="Impact" paragraphs={SONICFI.impact} />
-      </div>
+      </motion.div>
     </div>
   );
 };
