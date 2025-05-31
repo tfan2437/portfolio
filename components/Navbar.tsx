@@ -5,9 +5,12 @@ import NavLink from "@/components/NavLink";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Button } from "./ui/button";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isHovering, setIsHovering] = useState(false);
+
+  const path = usePathname();
 
   return (
     <nav className="w-full fixed top-0 left-0 z-30 flex justify-center bg-white">
@@ -34,7 +37,11 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="flex items-center gap-3">
-          <NavLink href="#about" text="ABOUT" offset={100} />
+          {path.startsWith("/project") ? (
+            <NavLink href="/" text="HOME" offset={100} />
+          ) : (
+            <NavLink href="#about" text="ABOUT" offset={100} />
+          )}
           <NavLink href="#projects" text="PROJECTS" offset={100} />
           <NavLink href="#contact" text="CONTACT" offset={100} />
         </div>

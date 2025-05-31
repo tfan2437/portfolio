@@ -13,7 +13,7 @@ const ProjectCard = ({ index }: { index: number }) => {
     >
       <div className="w-full aspect-5/3 overflow-hidden rounded-lg">
         <Image
-          src={`/placeholder/placeholder_${index + 1}.jpg`}
+          src={`/placeholder/placeholder_${index}.jpg`}
           alt="placeholder"
           width={2000}
           height={2000}

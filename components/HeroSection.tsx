@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -33,17 +34,24 @@ const HeroSection = () => {
         <button className="bg-black mt-6 text-white px-4 py-1.5 w-fit rounded-lg cursor-pointer hover:bg-green hover:text-black border-2 border-black transition-colors duration-500">
           <span className="font-semibold">Contact Me</span>
         </button>
-        <button
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
-          className="flex flex-row items-center gap-2 bg-white mt-6 text-black px-4 py-1.5 w-fit rounded-lg cursor-pointer hover:bg-green border-2 border-black transition-colors duration-500"
+        <Link
+          href={
+            "https://drive.google.com/file/d/1n9QQK_M0fy6nKjCSRvyHGkV32jCkQSam/view"
+          }
+          target="_blank"
         >
-          <span className="font-semibold">Resume</span>
+          <button
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+            className="flex flex-row items-center gap-2 bg-white mt-6 text-black px-4 py-1.5 w-fit rounded-lg cursor-pointer hover:bg-green border-2 border-black transition-colors duration-500"
+          >
+            <span className="font-semibold">Resume</span>
 
-          <div className={twMerge(isHovering && "animate-wave")}>
-            <Image src="/resume.png" alt="resume" width={16} height={16} />
-          </div>
-        </button>
+            <div className={twMerge(isHovering && "animate-wave")}>
+              <Image src="/resume.png" alt="resume" width={16} height={16} />
+            </div>
+          </button>
+        </Link>
       </motion.div>
     </div>
   );
