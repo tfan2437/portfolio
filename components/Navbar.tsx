@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import NavLink from "@/components/NavLink";
@@ -7,15 +8,22 @@ import { twMerge } from "tailwind-merge";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 
+import { useI18nStore, useTranslations } from "@/lib/store/useTranslations";
+
 const Navbar = () => {
+  const path = usePathname();
+  const { locale, setLocale } = useI18nStore();
+  const wording = useTranslations();
   const [isHovering, setIsHovering] = useState(false);
 
-  const path = usePathname();
+  const handleLocaleChange = () => {
+    setLocale(locale === "en" ? "zh-TW" : "en");
+  };
 
   return (
     <nav className="w-full fixed top-0 left-0 z-30 flex justify-center bg-white">
       <div className="flex justify-between items-center w-full max-w-7xl py-3">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 w-60">
           <Image
             src="/avatar2.jpg"
             alt="avatar"
@@ -25,10 +33,15 @@ const Navbar = () => {
           />
           <div className="flex flex-col">
             <span className="text-[18px] font-semibold font-inter">
-              Ting Wei Fan
+              {wording.intro.name}
             </span>
-            <span className="text-xs font-light text-neutral-600 font-inter">
-              Software Engineer
+            <span
+              className={twMerge(
+                "text-xs text-neutral-600 font-inter",
+                locale === "en" && "font-light"
+              )}
+            >
+              {wording.intro.occupation}
             </span>
             {/* <span className="text-xl font-semibold font-inter">范庭維</span>
             <span className="text-sm text-neutral-600 font-inter">
@@ -38,16 +51,24 @@ const Navbar = () => {
         </Link>
         <div className="flex items-center gap-3">
           {path.startsWith("/project") ? (
-            <NavLink href="/" text="HOME" offset={100} />
+            <NavLink href="/" text={wording.nav.home} offset={100} />
           ) : (
-            <NavLink href="#about" text="ABOUT" offset={100} />
+            <NavLink href="#about" text={wording.nav.about} offset={100} />
           )}
-          <NavLink href="#projects" text="PROJECTS" offset={100} />
-          <NavLink href="#contact" text="CONTACT" offset={100} />
+          <NavLink href="#projects" text={wording.nav.projects} offset={100} />
+          <NavLink href="#contact" text={wording.nav.contact} offset={100} />
         </div>
-        <div className="flex items-center gap-2">
-          <Button variant="link" className="cursor-pointer">
-            <span className="font-inter">中文</span>
+        <div className="flex items-center gap-2 w-60">
+          <Button
+            variant="link"
+            className="cursor-pointer"
+            onClick={() => handleLocaleChange()}
+          >
+            <div className="w-12 flex items-center justify-end">
+              <span className="font-inter">
+                {locale === "en" ? "中文" : "English"}
+              </span>
+            </div>
           </Button>
           <button
             className="bg-black text-white pl-4 pr-6 py-1.5 rounded-full cursor-pointer flex items-center gap-2 hover:bg-green hover:text-black border-2 border-black transition-colors duration-300"
@@ -62,7 +83,7 @@ const Navbar = () => {
                 height={16}
               />
             </div>
-            <span className="font-semibold">{`Let's Talk`}</span>
+            <span className="font-semibold">{wording.nav.letsTalk}</span>
           </button>
         </div>
       </div>

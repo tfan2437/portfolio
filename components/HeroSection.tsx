@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "@/lib/store/useTranslations";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,8 @@ import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 const HeroSection = () => {
+  const wording = useTranslations();
+
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -17,12 +20,8 @@ const HeroSection = () => {
         transition={{ duration: 1, ease: "easeIn" }}
       >
         <p className="text-4xl font-semibold leading-12 whitespace-pre-line">
-          {`Hey there! I'm Ting Wei. \nI build high-quality websites with \nmodern tech expertise.`}
+          {wording.intro.greeting}
         </p>
-
-        {/* <p className="text-4xl font-semibold leading-12 whitespace-pre-line ">
-          {`嗨！我是庭維，一名軟體工程師 \n專精全端網頁技術，打造高效美觀的數位體驗`}
-        </p> */}
       </motion.div>
 
       <motion.div
@@ -32,7 +31,7 @@ const HeroSection = () => {
         className="flex flex-row gap-4"
       >
         <button className="bg-black mt-6 text-white px-4 py-1.5 w-fit rounded-lg cursor-pointer hover:bg-green hover:text-black border-2 border-black transition-colors duration-500">
-          <span className="font-semibold">Contact Me</span>
+          <span className="font-semibold">{wording.nav.contactMe}</span>
         </button>
         <Link
           href={
@@ -45,7 +44,7 @@ const HeroSection = () => {
             onMouseLeave={() => setIsHovering(false)}
             className="flex flex-row items-center gap-2 bg-white mt-6 text-black px-4 py-1.5 w-fit rounded-lg cursor-pointer hover:bg-green border-2 border-black transition-colors duration-500"
           >
-            <span className="font-semibold">Resume</span>
+            <span className="font-semibold">{wording.nav.resume}</span>
 
             <div className={twMerge(isHovering && "animate-wave")}>
               <Image src="/resume.png" alt="resume" width={16} height={16} />
