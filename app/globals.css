@@ -173,3 +173,7 @@ body {
   animation: wave 0.7s ease-in-out infinite;
   transform-origin: 70% 70%;
 }
+
+.responsive {
+  @apply max-w-7xl w-full px-6 md:px-8 xl:px-0;
+}

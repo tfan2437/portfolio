@@ -70,6 +70,10 @@ export type BulletPoint = {
 };
 
 export type Project = {
+  type: string;
+  webDev: string;
+  year: string;
+  service: string;
   title: string;
   summary: string;
   techStack: BulletPoint[];

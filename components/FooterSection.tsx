@@ -39,9 +39,9 @@ const FooterSection = () => {
       id="contact"
       className="w-full flex flex-col items-center bg-black pt-20 pb-6"
     >
-      <div className="w-full max-w-7xl flex flex-col justify-between items-center h-[338px]">
-        <div className="w-full flex justify-between items-center">
-          <div className="w-full flex h-[200px] justify-between flex-col">
+      <div className="responsive flex flex-col lg:justify-between items-center h-auto lg:h-[338px]">
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center">
+          <div className="w-full flex h-auto gap-10 flex-col">
             <div className="w-full flex flex-col">
               <h1 className="text-2xl text-neutral-500">{footer.title}</h1>
               <p className="text-3xl text-white whitespace-pre-line mt-3">
@@ -68,7 +68,7 @@ const FooterSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-[180px] flex flex-col gap-2 items-end h-full pt-12">
+          <div className="w-[180px] flex flex-col gap-2 items-start lg:items-end h-full py-10 lg:pt-12">
             {footer.projects.map((project, index) => (
               <ProjectLink
                 key={index}
@@ -79,7 +79,7 @@ const FooterSection = () => {
           </div>
         </div>
 
-        <div className="w-full flex justify-between items-center">
+        <div className="w-full flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center">
           <span className="text-sm text-neutral-100">{footer.copyright}</span>
           <div className="flex gap-4 items-center">
             {platformLinks.map((link, index) => (

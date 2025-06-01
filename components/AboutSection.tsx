@@ -7,6 +7,7 @@ import type { Locale } from "@/types";
 import { twMerge } from "tailwind-merge";
 
 import { LINKEDIN_URL } from "@/constants";
+import { p } from "motion/react-client";
 
 const AboutSection = () => {
   const { locale } = useI18nStore();
@@ -21,10 +22,10 @@ const AboutSection = () => {
   return (
     <div
       id="about"
-      className="w-full flex flex-col items-center pb-[160px] pt-[100px]"
+      className="w-full flex flex-col items-center lg:pb-[160px] pb-[100px] pt-[100px]"
     >
-      <div className="w-full flex flex-row justify-between max-w-7xl gap-32">
-        <div className="flex flex-col w-1/2">
+      <div className="responsive flex flex-col lg:flex-row justify-between lg:gap-32">
+        <div className="flex flex-col w-full px-4 md:px-8 lg:px-0 lg:w-1/2">
           <Intro
             locale={locale}
             name={about.me.name}
@@ -46,7 +47,8 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className=" w-1/2 flex flex-col">
+        <div className="w-full lg:w-1/2 flex flex-col px-4 md:px-8 lg:px-0">
+          <hr className="w-full border-t-1 border-neutral-200 block lg:hidden my-8" />
           <div className="flex w-full flex-col gap-8">
             {about.education.map((edu, index) => (
               <Education
@@ -59,7 +61,7 @@ const AboutSection = () => {
               />
             ))}
           </div>
-          <div className="flex flex-col w-fit gap-4 border-t-1 border-neutral-200 pt-8 mt-8">
+          <div className="flex flex-col w-full lg:w-fit gap-4 border-t-1 border-neutral-200 pt-8 mt-8">
             {about.techStacks.map((tech, index) => (
               <Skill key={index} title={tech.title} skills={tech.skills} />
             ))}
@@ -196,9 +198,9 @@ const Education = ({
 
 const Skill = ({ title, skills }: { title: string; skills: string }) => {
   return (
-    <div className="flex gap-3 items-center text-black text-sm">
-      <span className="font-semibold">{title}:</span>
-      <span className="text-neutral-700">{skills}</span>
-    </div>
+    <p className="text-neutral-700 text-sm">
+      <span className="text-black font-semibold">{title}: </span>
+      {skills}
+    </p>
   );
 };

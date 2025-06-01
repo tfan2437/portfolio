@@ -43,3 +43,35 @@ export const PROJECTS_INFO: ProjectInfo[] = [
     link: "/project/orbit-ai-v1",
   },
 ];
+
+export const PROJECTS_IMAGES: Record<
+  string,
+  {
+    card: string;
+    images: string[];
+    details: string[];
+  }
+> = {
+  sonicfi: {
+    card: "/projects/sonicfi-1.jpg",
+    images: [
+      "/projects/sonicfi-1.jpg",
+      "/projects/sonicfi-2.jpg",
+      "/projects/sonicfi-3.jpg",
+    ],
+    details: ["/projects/sonicfi-4.jpg", "/projects/sonicfi-2.jpg"],
+  },
+  orbit: {
+    card: "/projects/orbit-3.jpg",
+    images: [
+      "/projects/orbit-1.jpg",
+      "/projects/orbit-2.jpg",
+      "/projects/orbit-3.jpg",
+    ],
+    details: [
+      "/projects/orbit-6.jpg",
+      "/projects/orbit-5.jpg",
+      "/projects/orbit-4.jpg",
+    ],
+  },
+};

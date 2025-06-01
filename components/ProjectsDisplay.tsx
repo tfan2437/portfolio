@@ -12,7 +12,7 @@ const ProjectsDisplay = () => {
       id="projects"
       className="w-full flex flex-col items-center bg-green py-20"
     >
-      <div className="w-full flex flex-col max-w-7xl">
+      <div className="responsive flex flex-col">
         <div className="flex gap-2 items-center mb-4 w-full">
           <div className="flex items-center gap-2">
             <div className="size-4 bg-neutral-300 rounded-full flex items-center justify-center">

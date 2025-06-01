@@ -2,15 +2,21 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { SetStateAction } from "react";
+import { Dispatch } from "react";
 
 const NavLink = ({
   href,
   text,
   offset = 67,
+  isMobile = false,
+  setIsMenuOpen = null,
 }: {
   href: string;
   text: string;
   offset?: number;
+  isMobile?: boolean;
+  setIsMenuOpen?: Dispatch<SetStateAction<boolean>> | null;
 }) => {
   const isInternalLink = href.startsWith("#");
 
@@ -30,10 +36,17 @@ const NavLink = ({
         });
       }
     }
+    if (isMobile && setIsMenuOpen !== null) {
+      setIsMenuOpen(false);
+    }
   };
 
   return (
-    <Link href={href} onClick={handleClick}>
+    <Link
+      href={href}
+      onClick={handleClick}
+      className="py-4 md:py-0 border-b-1 border-neutral-200 md:border-b-0 w-full flex justify-center"
+    >
       <Button variant="link" className="cursor-pointer">
         <span className="font-inter">{text}</span>
       </Button>

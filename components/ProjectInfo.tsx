@@ -1,16 +1,18 @@
-import { SONICFI } from "@/constants/project-constants";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { duration, ease } from "@/constants/animation";
 import { useProject, useTranslations } from "@/lib/store/useGlobal";
+import { PROJECTS_IMAGES } from "@/constants";
 
-const ProjectInfo = () => {
+const ProjectInfo = ({ name }: { name: string }) => {
   const { label } = useTranslations();
-  const project = useProject("sonicfi");
+  const project = useProject(name);
+
+  const { details } = PROJECTS_IMAGES[name];
 
   return (
-    <div className="w-full flex flex-col items-center max-w-4xl select-none mt-10 mb-48">
+    <div className="w-full flex flex-col items-center px-8 lg:px-0 max-w-4xl select-none mt-6 sm:mt-10 mb-48">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -31,9 +33,7 @@ const ProjectInfo = () => {
         <Summary title={label.frontend} techs={project.frontend} />
         <Summary title={label.devOps} techs={project.devOps} />
         <div className="flex flex-col gap-8">
-          <ImagesDisplay
-            images={["/projects/sonicfi-1.jpg", "/projects/sonicfi-4.jpg"]}
-          />
+          <ImagesDisplay images={details} />
           <Summary title={label.uiux} techs={project.uiux} />
         </div>
 
@@ -62,7 +62,7 @@ const Intro = ({
 }) => {
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-row justify-between items-center">
+      <div className="flex flex-col-reverse sm:flex-row gap-4 sm:gap-0 sm:justify-between sm:items-center">
         <h1 className="font-semibold text-3xl">{title}</h1>
         <div className="flex flex-row gap-2 items-center">
           <Link
