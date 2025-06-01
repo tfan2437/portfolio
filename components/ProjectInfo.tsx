@@ -3,8 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { duration, ease } from "@/constants/animation";
+import { useProject, useTranslations } from "@/lib/store/useGlobal";
 
 const ProjectInfo = () => {
+  const { label } = useTranslations();
+  const project = useProject("sonicfi");
+
   return (
     <div className="w-full flex flex-col items-center max-w-4xl select-none mt-10 mb-48">
       <motion.div
@@ -17,23 +21,27 @@ const ProjectInfo = () => {
         className="w-full flex flex-col gap-16"
       >
         <Intro
-          title={SONICFI.title}
+          title={project.title}
           href={"https://www.orbits-ai.com"}
-          description={SONICFI.summary}
+          description={project.summary}
+          buttonText={label.viewWebsite}
         />
-        <BulletPoints title="Technology Stack" points={SONICFI.techStack} />
-        <Summary title="Backend Development" techs={SONICFI.backend} />
-        <Summary title="Frontend Development" techs={SONICFI.frontend} />
-        <Summary title="DevOps & CI/CD" techs={SONICFI.devOps} />
+        <BulletPoints title={label.techStack} points={project.techStack} />
+        <Summary title={label.backend} techs={project.backend} />
+        <Summary title={label.frontend} techs={project.frontend} />
+        <Summary title={label.devOps} techs={project.devOps} />
         <div className="flex flex-col gap-8">
           <ImagesDisplay
             images={["/projects/sonicfi-1.jpg", "/projects/sonicfi-4.jpg"]}
           />
-          <Summary title="UI/UX Design" techs={SONICFI.uiux} />
+          <Summary title={label.uiux} techs={project.uiux} />
         </div>
 
-        <Conclusion title="Achievements" paragraphs={SONICFI.achievements} />
-        <Conclusion title="Impact" paragraphs={SONICFI.impact} />
+        <Conclusion
+          title={label.achievements}
+          paragraphs={project.achievements}
+        />
+        <Conclusion title={label.impact} paragraphs={project.impact} />
       </motion.div>
     </div>
   );
@@ -45,29 +53,33 @@ const Intro = ({
   title,
   href,
   description,
+  buttonText,
 }: {
   title: string;
   href: string;
   description: string;
+  buttonText: string;
 }) => {
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-row justify-between items-center">
         <h1 className="font-semibold text-3xl">{title}</h1>
-        <Link
-          href={href}
-          target="_blank"
-          className="text-white bg-black py-2 border-2 border-black hover:text-black hover:bg-green transition-colors duration-300 px-5 rounded-full flex flex-row gap-2 items-center"
-        >
-          <span className="font-semibold">Visit Website</span>
-          <Image
-            src={"/icons/link.png"}
-            alt="link"
-            width={20}
-            height={20}
-            className="w-5 h-5"
-          />
-        </Link>
+        <div className="flex flex-row gap-2 items-center">
+          <Link
+            href={href}
+            target="_blank"
+            className="text-white bg-black py-2 border-2 border-black hover:text-black hover:bg-green transition-colors duration-300 px-5 rounded-full flex flex-row gap-2 items-center"
+          >
+            <span className="font-semibold">{buttonText}</span>
+            <Image
+              src={"/icons/link.png"}
+              alt="link"
+              width={20}
+              height={20}
+              className="w-5 h-5"
+            />
+          </Link>
+        </div>
       </div>
       <p className="text-neutral-700 text-base">{description}</p>
     </div>

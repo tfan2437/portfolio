@@ -8,7 +8,7 @@ import { twMerge } from "tailwind-merge";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 
-import { useI18nStore, useTranslations } from "@/lib/store/useTranslations";
+import { useI18nStore, useTranslations } from "@/lib/store/useGlobal";
 
 const Navbar = () => {
   const path = usePathname();
@@ -25,8 +25,8 @@ const Navbar = () => {
       <div className="flex justify-between items-center w-full max-w-7xl py-3">
         <Link href="/" className="flex items-center gap-2 w-60">
           <Image
-            src="/avatar2.jpg"
-            alt="avatar"
+            src="/metadata/logo.jpg"
+            alt="logo"
             width={42}
             height={42}
             className="rounded-full block"
@@ -77,7 +77,7 @@ const Navbar = () => {
           >
             <div className={twMerge(isHovering && "animate-wave")}>
               <Image
-                src="/waving-hand.png"
+                src="/icons/waving-hand.png"
                 alt="waving-hand"
                 width={16}
                 height={16}

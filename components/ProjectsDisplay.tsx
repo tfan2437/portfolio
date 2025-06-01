@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "motion/react";
 import { useState } from "react";
+import type { ProjectInfo } from "@/constants";
+import { PROJECTS_INFO } from "@/constants";
 
 const ProjectsDisplay = () => {
   return (
@@ -21,8 +22,8 @@ const ProjectsDisplay = () => {
           </div>
         </div>
         <div className="w-full flex flex-col select-none">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <ProjectItem key={index} index={index} />
+          {PROJECTS_INFO.map((project, index) => (
+            <ProjectItem key={index} project={project} />
           ))}
         </div>
       </div>
@@ -31,48 +32,82 @@ const ProjectsDisplay = () => {
 };
 export default ProjectsDisplay;
 
-const ProjectItem = ({ index }: { index: number }) => {
+const ProjectItem = ({ project }: { project: ProjectInfo }) => {
   const router = useRouter();
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div
-      onClick={() => router.push("/")}
+      onClick={() => router.push(project.link)}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       className="w-full flex justify-between items-center cursor-pointer group border-t-2 border-black py-5 group"
     >
       <div className="w-full flex items-center gap-20 text-black">
-        <span className="">[2025]</span>
-        <span className="font-medium text-2xl">Project Name</span>
+        <span className="">[{project.year}]</span>
+        <span className="font-medium text-2xl">{project.name}</span>
       </div>
       <div className="flex items-center gap-2">
         <div className="h-[160px] w-px" />
+
         {isHovering ? (
-          Array.from({ length: 3 }).map((_, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 1, y: 10 }}
-              animate={
-                isHovering ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }
-              }
-              transition={{ duration: 0.2, ease: "easeIn", delay: i * 0.05 }}
-              className="aspect-[4/3] h-[160px] hidden group-hover:block"
-            >
-              <Image
-                src={`/placeholder/placeholder_${index}.jpg`}
-                alt="placeholder"
-                width={2000}
-                height={2000}
-                className="h-full w-auto object-cover"
-                draggable={false}
-              />
-            </motion.div>
-          ))
+          <AnimatedSquares />
         ) : (
           <div className="h-[160px] w-auto flex items-center text-black font-medium whitespace-nowrap">
-            www.orbits-ai.com
+            {project.href}
           </div>
         )}
+      </div>
+    </div>
+  );
+};
+
+const AnimatedSquares = () => {
+  const squares = [{ delay: 0 }, { delay: 0.15 }, { delay: 0.3 }];
+
+  return (
+    <div className="flex items-center justify-center">
+      <div className="flex gap-6">
+        {squares.map((square, index) => (
+          <motion.div
+            key={index}
+            className="w-40 h-40 bg-black shadow-2xl rounded-lg"
+            initial={{
+              y: 150,
+              opacity: 0,
+              rotateZ: -15,
+              scale: 0.8,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              rotateZ: 0,
+              scale: 1,
+            }}
+            transition={{
+              type: "spring",
+              damping: 15,
+              stiffness: 100,
+              bounce: 0.6,
+              duration: 2,
+              delay: square.delay,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+            whileHover={{
+              scale: 1.05,
+              rotateZ: 3,
+              y: -10,
+              transition: {
+                duration: 0.3,
+                type: "spring",
+                stiffness: 300,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: { duration: 0.1 },
+            }}
+          />
+        ))}
       </div>
     </div>
   );

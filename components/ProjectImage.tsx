@@ -1,8 +1,12 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { duration, ease } from "@/constants/animation";
+import { useProject, useTranslations } from "@/lib/store/useGlobal";
 
 const ProjectImage = () => {
+  const { label } = useTranslations();
+  const project = useProject("sonicfi");
+
   const images: string[] = [
     "/projects/sonicfi-1.jpg",
     "/projects/sonicfi-2.jpg",
@@ -23,20 +27,20 @@ const ProjectImage = () => {
           className="w-full max-w-7xl grid grid-cols-5 py-12"
         >
           <div className="text-sm flex flex-col gap-1">
-            <span className="text-neutral-500">Type</span>
-            <span className="text-neutral-200">Personal Project</span>
+            <span className="text-neutral-500">{label.type}</span>
+            <span className="text-neutral-200">{project.type}</span>
           </div>
           <div className="text-sm flex flex-col gap-1">
-            <span className="text-neutral-500">Web Dev</span>
-            <span className="text-neutral-200">Full Stack</span>
+            <span className="text-neutral-500">{label.webDev}</span>
+            <span className="text-neutral-200">{project.webDev}</span>
           </div>
           <div className="text-sm flex flex-col gap-1">
-            <span className="text-neutral-500">Year</span>
-            <span className="text-neutral-200">2025</span>
+            <span className="text-neutral-500">{label.year}</span>
+            <span className="text-neutral-200">{project.year}</span>
           </div>
           <div className="text-sm flex flex-col gap-1">
-            <span className="text-neutral-500">Service</span>
-            <span className="text-neutral-200">Music Streaming Platform</span>
+            <span className="text-neutral-500">{label.service}</span>
+            <span className="text-neutral-200">{project.service}</span>
           </div>
         </motion.div>
       </div>

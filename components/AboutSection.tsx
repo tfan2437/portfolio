@@ -1,60 +1,68 @@
 "use client";
-import AboutEduCard from "./about/AboutEduCard";
-import AboutIntro from "./about/AboutIntro";
-import AboutJobCard from "./about/AboutJobCard";
 
-import { EDUCATION, JOBS } from "@/constants/about";
+import { useTranslations, useI18nStore } from "@/lib/store/useGlobal";
+import Image from "next/image";
+import Link from "next/link";
+import type { Locale } from "@/types";
+import { twMerge } from "tailwind-merge";
+
+import { LINKEDIN_URL } from "@/constants";
 
 const AboutSection = () => {
+  const { locale } = useI18nStore();
+  const about = useTranslations().about;
+
+  const schoolImages = [
+    "/icons/gatech.png",
+    "/icons/empire-state.png",
+    "/icons/cornell.png",
+  ];
+
   return (
     <div
       id="about"
-      className="w-full flex flex-col items-center pb-[200px] pt-[150px]"
+      className="w-full flex flex-col items-center pb-[160px] pt-[100px]"
     >
       <div className="w-full flex flex-row justify-between max-w-7xl gap-32">
         <div className="flex flex-col w-1/2">
-          <AboutIntro />
+          <Intro
+            locale={locale}
+            name={about.me.name}
+            title={about.me.title}
+            intro={about.me.intro}
+          />
           <div className="flex flex-col mt-16 gap-10">
-            {JOBS.map((job) => (
-              <AboutJobCard key={job.company} {...job} />
+            {about.jobs.map((job, index) => (
+              <Job
+                key={index}
+                locale={locale}
+                title={job.title}
+                company={job.company}
+                date={job.date}
+                description={job.description}
+                href={LINKEDIN_URL[index]}
+              />
             ))}
           </div>
         </div>
 
         <div className=" w-1/2 flex flex-col">
           <div className="flex w-full flex-col gap-8">
-            {EDUCATION.map((edu) => (
-              <AboutEduCard key={edu.school} {...edu} />
+            {about.education.map((edu, index) => (
+              <Education
+                key={index}
+                locale={locale}
+                school={edu.school}
+                degree={edu.degree}
+                date={edu.date}
+                image={schoolImages[index]}
+              />
             ))}
           </div>
           <div className="flex flex-col w-fit gap-4 border-t-1 border-neutral-200 pt-8 mt-8">
-            <SkillItem
-              title="Languages"
-              skills="TypeScript, Java, Python, JavaScript, C++"
-            />
-            <SkillItem
-              title="Frontend"
-              skills="Next.js, React, Redux, Tailwind CSS"
-            />
-            <SkillItem
-              title="Backend"
-              skills="Node.js, Express.js, Spring Boot"
-            />
-            <SkillItem
-              title="Communication"
-              skills="RESTful APIs, WebSockets"
-            />
-            <SkillItem
-              title="Authentication"
-              skills="JWT, OAuth, Firebase Auth"
-            />
-            <SkillItem title="Databases" skills="MongoDB, PostgreSQL, MySQL" />
-            <SkillItem
-              title="DevOps"
-              skills="Git, Docker, AWS (S3, EC2, Lambda)"
-            />
-            <SkillItem title="Testing" skills="Jest, Unit Testing" />
-            <SkillItem title="Concept" skills="Data Structures, Algorithms" />
+            {about.techStacks.map((tech, index) => (
+              <Skill key={index} title={tech.title} skills={tech.skills} />
+            ))}
           </div>
         </div>
       </div>
@@ -64,7 +72,129 @@ const AboutSection = () => {
 
 export default AboutSection;
 
-const SkillItem = ({ title, skills }: { title: string; skills: string }) => {
+const Intro = ({
+  locale,
+  name,
+  title,
+  intro,
+}: {
+  locale: Locale;
+  name: string;
+  title: string;
+  intro: string;
+}) => {
+  return (
+    <div className="w-full flex flex-col">
+      <h1 className="font-bold">{name}</h1>
+      <p
+        className={twMerge(
+          "mt-1 text-sm",
+          locale === "en" ? "font-light text-neutral-700" : "text-neutral-600"
+        )}
+      >
+        {title}
+      </p>
+      <p className="text-neutral-700 mt-3 text-sm">{intro}</p>
+    </div>
+  );
+};
+
+const Job = ({
+  locale,
+  company,
+  title,
+  date,
+  description,
+  href,
+}: {
+  locale: Locale;
+  company: string;
+  title: string;
+  date: string;
+  description: string;
+  href: string;
+}) => {
+  const isEn = locale === "en";
+
+  return (
+    <div className="flex flex-col relative">
+      <Link
+        target="_blank"
+        href={href}
+        className="absolute top-0 right-0 cursor-pointer p-1 "
+      >
+        <Image
+          src="/icons/linkedin-black.png"
+          alt="linkedin"
+          width={16}
+          height={16}
+          className="size-5"
+        />
+      </Link>
+      <h2
+        className={twMerge("text-base", isEn ? "font-medium" : "font-semibold")}
+      >
+        {title}
+      </h2>
+      <span
+        className={twMerge(
+          "mt-1 text-sm",
+          isEn ? "font-light text-neutral-700" : "text-neutral-600"
+        )}
+      >
+        {company}
+      </span>
+      <span
+        className={twMerge(
+          "mt-1 text-sm",
+          isEn ? "font-light text-neutral-700" : "text-neutral-600"
+        )}
+      >
+        {date}
+      </span>
+      <p className="mt-3 text-sm">{description}</p>
+    </div>
+  );
+};
+
+const Education = ({
+  degree,
+  school,
+  date,
+  image,
+  locale,
+}: {
+  degree: string;
+  school: string;
+  date: string;
+  image: string;
+  locale: Locale;
+}) => {
+  return (
+    <div
+      className={twMerge(
+        "flex flex-col relative",
+        locale === "en" && "font-light"
+      )}
+    >
+      <div className="flex flex-row items-center gap-1.5">
+        <Image src={image} alt="school" width={16} height={16} />
+        <h2
+          className={twMerge(
+            "text-base",
+            locale === "en" ? "font-medium" : "font-semibold"
+          )}
+        >
+          {school}
+        </h2>
+      </div>
+      <span className="text-sm text-neutral-700 mt-1">{degree}</span>
+      <span className="mt-1 text-sm text-neutral-700">{date}</span>
+    </div>
+  );
+};
+
+const Skill = ({ title, skills }: { title: string; skills: string }) => {
   return (
     <div className="flex gap-3 items-center text-black text-sm">
       <span className="font-semibold">{title}:</span>

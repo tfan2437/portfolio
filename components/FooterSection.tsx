@@ -2,11 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import FooterProjectLink from "./FooterProjectLink";
 import { CopyIcon, CheckIcon } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "@/lib/store/useGlobal";
+import { Link as LinkIcon } from "lucide-react";
+
 const FooterSection = () => {
   const [isCopied, setIsCopied] = useState(false);
+  const footer = useTranslations().footer;
 
   const handleCopy = () => {
     setIsCopied(true);
@@ -15,6 +18,21 @@ const FooterSection = () => {
       setIsCopied(false);
     }, 1000);
   };
+
+  const platformLinks = [
+    {
+      image: "/icons/linkedin.png",
+      href: "https://www.linkedin.com/in/tingweifan/",
+    },
+    {
+      image: "/icons/github.png",
+      href: "https://github.com/tingweifan",
+    },
+    {
+      image: "/icons/gmail.png",
+      href: "mailto:tfan2437@gmail.com",
+    },
+  ];
 
   return (
     <footer
@@ -25,17 +43,17 @@ const FooterSection = () => {
         <div className="w-full flex justify-between items-center">
           <div className="w-full flex h-[200px] justify-between flex-col">
             <div className="w-full flex flex-col">
-              <h1 className="text-2xl text-neutral-500">
-                Let’s Build Something Great Together
-              </h1>
+              <h1 className="text-2xl text-neutral-500">{footer.title}</h1>
               <p className="text-3xl text-white whitespace-pre-line mt-3">
-                {`Fullstack engineer with solid experience building \nscalable, user-focused web apps`}
+                {footer.intro}
               </p>
             </div>
             <div className="w-full flex flex-col">
-              <p className="text-sm text-neutral-500">Send a message</p>
+              <p className="text-sm text-neutral-500">{footer.message}</p>
               <div className="flex flex-row gap-1 items-center">
-                <p className="text-base text-white font-semibold">{`tfan2437@gmail.com`}</p>
+                <p className="text-base text-white font-semibold">
+                  {footer.email}
+                </p>
                 <button
                   onClick={handleCopy}
                   disabled={isCopied}
@@ -51,58 +69,22 @@ const FooterSection = () => {
             </div>
           </div>
           <div className="w-[180px] flex flex-col gap-2 items-end h-full pt-12">
-            <FooterProjectLink
-              title="Tovier"
-              href="https://sonicfi-ai.vercel.app/"
-            />
-            <FooterProjectLink
-              title="Orbit AI v2"
-              href="https://orbit-ai-v2.vercel.app/"
-            />
-            <FooterProjectLink
-              title="Sonicfi v2"
-              href="https://sonicfi-ai.vercel.app/"
-            />
-            <FooterProjectLink
-              title="Orbit AI v1"
-              href="https://orbit-ai-v2.vercel.app/"
-            />
-            <FooterProjectLink
-              title="Sonicfi v1"
-              href="https://sonicfi-ai.vercel.app/"
-            />
+            {footer.projects.map((project, index) => (
+              <ProjectLink
+                key={index}
+                title={project.name}
+                href={project.href}
+              />
+            ))}
           </div>
         </div>
 
         <div className="w-full flex justify-between items-center">
-          <span className="text-sm text-neutral-100">
-            Copyright © 2025 Ting Wei Fan. All Rights Reserved.
-          </span>
+          <span className="text-sm text-neutral-100">{footer.copyright}</span>
           <div className="flex gap-4 items-center">
-            <Link href="/" target="_blank" className="size-6">
-              <Image
-                src="/footer-linkedin.png"
-                alt="linkedin"
-                width={32}
-                height={32}
-              />
-            </Link>
-            <Link href="/" target="_blank" className="size-6">
-              <Image
-                src="/footer-github.png"
-                alt="github"
-                width={32}
-                height={32}
-              />
-            </Link>
-            <Link href="/" target="_blank" className="size-6">
-              <Image
-                src="/footer-gmail.png"
-                alt="gmail"
-                width={32}
-                height={32}
-              />
-            </Link>
+            {platformLinks.map((link, index) => (
+              <PlatformLink key={index} image={link.image} href={link.href} />
+            ))}
           </div>
         </div>
       </div>
@@ -110,3 +92,24 @@ const FooterSection = () => {
   );
 };
 export default FooterSection;
+
+const ProjectLink = ({ title, href }: { title: string; href: string }) => {
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      className="text-neutral-400 flex flex-row gap-2 items-center hover:text-green transition-colors duration-300"
+    >
+      <span className="text-sm">{title}</span>
+      <LinkIcon className="size-4" />
+    </Link>
+  );
+};
+
+const PlatformLink = ({ image, href }: { image: string; href: string }) => {
+  return (
+    <Link href={href} target="_blank" className="size-6">
+      <Image src={image} alt="platform" width={32} height={32} />
+    </Link>
+  );
+};

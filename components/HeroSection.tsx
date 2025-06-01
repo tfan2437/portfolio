@@ -1,5 +1,5 @@
 "use client";
-import { useTranslations } from "@/lib/store/useTranslations";
+import { useTranslations } from "@/lib/store/useGlobal";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,7 +47,12 @@ const HeroSection = () => {
             <span className="font-semibold">{wording.nav.resume}</span>
 
             <div className={twMerge(isHovering && "animate-wave")}>
-              <Image src="/resume.png" alt="resume" width={16} height={16} />
+              <Image
+                src="/icons/resume.png"
+                alt="resume"
+                width={16}
+                height={16}
+              />
             </div>
           </button>
         </Link>

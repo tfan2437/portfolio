@@ -17,7 +17,7 @@ const AnimationSeperator = () => {
             <button className="bg-white items-center flex flex-row gap-2 text-black px-4 py-1.5 w-fit rounded-full cursor-pointer hover:text-red-600 hover:border-red-600 border-2 border-black transition-colors duration-500">
               <div className="size-5 rounded-full aspect-square">
                 <Image
-                  src="/cornell.png"
+                  src="/icons/cornell-red.png"
                   alt="cornell"
                   width={100}
                   height={100}
