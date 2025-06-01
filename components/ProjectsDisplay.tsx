@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import type { ProjectInfo } from "@/constants";
 import { PROJECTS_INFO } from "@/constants";
+import Image from "next/image";
 
 const ProjectsDisplay = () => {
   return (
@@ -50,7 +51,7 @@ const ProjectItem = ({ project }: { project: ProjectInfo }) => {
         <div className="h-[160px] w-px" />
 
         {isHovering ? (
-          <AnimatedSquares />
+          <AnimatedSquares previews={project.previews} />
         ) : (
           <div className="h-[160px] w-auto flex items-center text-black font-medium whitespace-nowrap">
             {project.href}
@@ -61,7 +62,7 @@ const ProjectItem = ({ project }: { project: ProjectInfo }) => {
   );
 };
 
-const AnimatedSquares = () => {
+const AnimatedSquares = ({ previews }: { previews: string[] }) => {
   const squares = [{ delay: 0 }, { delay: 0.15 }, { delay: 0.3 }];
 
   return (
@@ -70,7 +71,7 @@ const AnimatedSquares = () => {
         {squares.map((square, index) => (
           <motion.div
             key={index}
-            className="w-40 h-40 bg-black shadow-2xl rounded-lg"
+            className="w-40 h-40 bg-transparent shadow-2xl rounded-lg"
             initial={{
               y: 150,
               opacity: 0,
@@ -106,7 +107,15 @@ const AnimatedSquares = () => {
               scale: 0.95,
               transition: { duration: 0.1 },
             }}
-          />
+          >
+            <Image
+              src={previews[index]}
+              alt="preview"
+              width={160}
+              height={160}
+              className="rounded-lg w-full h-full object-cover"
+            />
+          </motion.div>
         ))}
       </div>
     </div>

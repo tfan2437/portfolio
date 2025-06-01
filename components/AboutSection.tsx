@@ -7,7 +7,6 @@ import type { Locale } from "@/types";
 import { twMerge } from "tailwind-merge";
 
 import { LINKEDIN_URL } from "@/constants";
-import { p } from "motion/react-client";
 
 const AboutSection = () => {
   const { locale } = useI18nStore();
