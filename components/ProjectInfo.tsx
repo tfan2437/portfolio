@@ -204,7 +204,7 @@ const Images = ({
             src={path}
             alt={"project image"}
             width={900}
-            height={900}
+            height={580}
             className="w-full h-auto rounded-lg"
           />
         ))}

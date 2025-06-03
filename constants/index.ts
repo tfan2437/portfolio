@@ -84,47 +84,43 @@ export const PROJECTS_INFO: ProjectInfo[] = [
   },
 ];
 
-export const PROJECTS_IMAGES: Record<
-  string,
-  {
-    card: string;
-    projectImages: string[];
-    details: string[];
-  }
-> = {
-  sonicfi: {
-    card: "/projects/sonicfi-1.jpg",
-    projectImages: [
-      "/projects/sonicfi-1.jpg",
-      "/projects/sonicfi-2.jpg",
-      "/projects/sonicfi-3.jpg",
-    ],
-    details: ["/projects/sonicfi-4.jpg", "/projects/sonicfi-2.jpg"],
-  },
-  orbit: {
-    card: "/projects/orbit-3.jpg",
-    projectImages: [
-      "/projects/orbit-1.jpg",
-      "/projects/orbit-2.jpg",
-      "/projects/orbit-3.jpg",
-    ],
-    details: [
-      "/projects/orbit-6.jpg",
-      "/projects/orbit-5.jpg",
-      "/projects/orbit-4.jpg",
-    ],
-  },
-  portfolio: {
-    card: "/projects/orbit-3.jpg",
-    projectImages: [
-      "/projects/orbit-1.jpg",
-      "/projects/orbit-2.jpg",
-      "/projects/orbit-3.jpg",
-    ],
-    details: [
-      "/projects/orbit-6.jpg",
-      "/projects/orbit-5.jpg",
-      "/projects/orbit-4.jpg",
-    ],
-  },
+export const PROJECT_CARDS: Record<string, string> = {
+  sonicfi: "/projects/sonicfi-1.jpg",
+  orbit: "/projects/orbit-3.jpg",
+  "orbit-v1": "/projects/orbit-3.jpg",
+  tovier: "/projects/orbit-3.jpg",
+  portfolio: "/projects/orbit-3.jpg",
+};
+
+export const PROJECTS_IMAGES: Record<string, string[]> = {
+  sonicfi: [
+    "/projects/sonicfi-1.jpg",
+    "/projects/sonicfi-2.jpg",
+    "/projects/sonicfi-3.jpg",
+  ],
+  orbit: [
+    "/projects/orbit-1.jpg",
+    "/projects/orbit-2.jpg",
+    "/projects/orbit-3.jpg",
+  ],
+  "orbit-v1": [
+    "/projects/orbit-1.jpg",
+    "/projects/orbit-2.jpg",
+    "/projects/orbit-3.jpg",
+  ],
+  tovier: [
+    "https://r2.tfan2437.workers.dev/projects/tovier-0.webp",
+    "https://r2.tfan2437.workers.dev/projects/tovier-1.webp",
+    "https://r2.tfan2437.workers.dev/projects/tovier-2.webp",
+  ],
+  portfolio: [
+    "/projects/orbit-1.jpg",
+    "/projects/orbit-2.jpg",
+    "/projects/orbit-3.jpg",
+  ],
+  rerender: [
+    "/projects/orbit-1.jpg",
+    "/projects/orbit-2.jpg",
+    "/projects/orbit-3.jpg",
+  ],
 };

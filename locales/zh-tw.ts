@@ -832,8 +832,13 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
         ],
       },
       {
-        type: "breakdown",
+        type: "image",
         name: "UI/UX 設計",
+        images: [
+          "https://r2.tfan2437.workers.dev/projects/tovier-3.webp",
+          "https://r2.tfan2437.workers.dev/projects/tovier-4.webp",
+        ],
+        paragraphs: [],
         details: [
           {
             title: "自適應佈局: ",

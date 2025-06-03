@@ -833,8 +833,13 @@ export const PROJECTS_EN: Record<string, Project> = {
         ],
       },
       {
-        type: "breakdown",
+        type: "image",
         name: "UI/UX Design",
+        images: [
+          "https://r2.tfan2437.workers.dev/projects/tovier-3.webp",
+          "https://r2.tfan2437.workers.dev/projects/tovier-4.webp",
+        ],
+        paragraphs: [],
         details: [
           {
             title: "Responsive Layout: ",
@@ -866,4 +871,12 @@ export const PROJECTS_EN: Record<string, Project> = {
       },
     ],
   },
+};
+
+const temp = {
+  type: "image",
+  name: "UI/UX Design",
+  images: [],
+  paragraphs: [],
+  details: [],
 };
