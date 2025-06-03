@@ -8,7 +8,7 @@ const ProjectImage = ({ name }: { name: string }) => {
   const { label } = useTranslations();
   const project = useProject(name);
 
-  const { images } = PROJECTS_IMAGES[name];
+  const { projectImages } = PROJECTS_IMAGES[name];
 
   return (
     <div
@@ -54,7 +54,7 @@ const ProjectImage = ({ name }: { name: string }) => {
       >
         <div className="w-full sm:w-2/3 aspect-5/3 overflow-hidden rounded-lg">
           <Image
-            src={images[0]}
+            src={projectImages[0]}
             alt="placeholder"
             width={2000}
             height={2000}
@@ -65,7 +65,7 @@ const ProjectImage = ({ name }: { name: string }) => {
         <div className="w-full sm:w-1/3 flex flex-col gap-2">
           <div className="w-full aspect-5/3 overflow-hidden rounded-lg">
             <Image
-              src={images[1]}
+              src={projectImages[1]}
               alt="placeholder"
               width={2000}
               height={2000}
@@ -75,7 +75,7 @@ const ProjectImage = ({ name }: { name: string }) => {
           </div>
           <div className="w-full aspect-5/3 overflow-hidden rounded-lg hidden sm:block">
             <Image
-              src={images[2]}
+              src={projectImages[2]}
               alt="placeholder"
               width={2000}
               height={2000}

@@ -12,6 +12,9 @@ export type ProjectInfo = {
   previews: string[];
 };
 
+const PREVIEW_PREFIX: string =
+  "https://r2.tfan2437.workers.dev/projects/preview-";
+
 export const PROJECTS_INFO: ProjectInfo[] = [
   {
     year: 2025,
@@ -19,20 +22,31 @@ export const PROJECTS_INFO: ProjectInfo[] = [
     href: "sonic-fi.com",
     link: "/project/sonicfi",
     previews: [
-      "/previews/orbit-p1.jpg",
-      "/previews/orbit-p2.jpg",
-      "/previews/orbit-p3.jpg",
+      `${PREVIEW_PREFIX}orbit-0.webp`,
+      `${PREVIEW_PREFIX}orbit-1.webp`,
+      `${PREVIEW_PREFIX}orbit-2.webp`,
     ],
   },
   {
     year: 2025,
     name: "Orbit AI",
-    href: "orbits-ai.com",
-    link: "/project/orbit-ai",
+    href: "https://www.orbits-ai.com",
+    link: "/project/orbit",
     previews: [
-      "/previews/orbit-p1.jpg",
-      "/previews/orbit-p2.jpg",
-      "/previews/orbit-p3.jpg",
+      `${PREVIEW_PREFIX}orbit-0.webp`,
+      `${PREVIEW_PREFIX}orbit-1.webp`,
+      `${PREVIEW_PREFIX}orbit-2.webp`,
+    ],
+  },
+  {
+    year: 2025,
+    name: "Portfolio",
+    href: "https://www.orbits-ai.com",
+    link: "/project/portfolio",
+    previews: [
+      `${PREVIEW_PREFIX}orbit-0.webp`,
+      `${PREVIEW_PREFIX}orbit-1.webp`,
+      `${PREVIEW_PREFIX}orbit-2.webp`,
     ],
   },
   {
@@ -41,9 +55,9 @@ export const PROJECTS_INFO: ProjectInfo[] = [
     href: "rerenderai.com",
     link: "/project/rerender-ai",
     previews: [
-      "/previews/rerender-p1.jpg",
-      "/previews/rerender-p2.jpg",
-      "/previews/rerender-p3.jpg",
+      `${PREVIEW_PREFIX}rerender-0.webp`,
+      `${PREVIEW_PREFIX}rerender-1.webp`,
+      `${PREVIEW_PREFIX}rerender-2.webp`,
     ],
   },
   {
@@ -52,9 +66,9 @@ export const PROJECTS_INFO: ProjectInfo[] = [
     href: "tovier-trailer.vercel.app",
     link: "/project/tovier-trailer",
     previews: [
-      "/previews/tovier-p1.jpg",
-      "/previews/tovier-p2.jpg",
-      "/previews/tovier-p3.jpg",
+      `${PREVIEW_PREFIX}tovier-0.webp`,
+      `${PREVIEW_PREFIX}tovier-1.webp`,
+      `${PREVIEW_PREFIX}tovier-2.webp`,
     ],
   },
   {
@@ -63,9 +77,9 @@ export const PROJECTS_INFO: ProjectInfo[] = [
     href: "orbit-ai-chatbot.vercel.app",
     link: "/project/orbit-ai-v1",
     previews: [
-      "/previews/orbit-v1-p1.jpg",
-      "/previews/orbit-v1-p2.jpg",
-      "/previews/orbit-v1-p3.jpg",
+      `${PREVIEW_PREFIX}orbit-v1-0.webp`,
+      `${PREVIEW_PREFIX}orbit-v1-1.webp`,
+      `${PREVIEW_PREFIX}orbit-v1-2.webp`,
     ],
   },
 ];
@@ -74,13 +88,13 @@ export const PROJECTS_IMAGES: Record<
   string,
   {
     card: string;
-    images: string[];
+    projectImages: string[];
     details: string[];
   }
 > = {
   sonicfi: {
     card: "/projects/sonicfi-1.jpg",
-    images: [
+    projectImages: [
       "/projects/sonicfi-1.jpg",
       "/projects/sonicfi-2.jpg",
       "/projects/sonicfi-3.jpg",
@@ -89,7 +103,20 @@ export const PROJECTS_IMAGES: Record<
   },
   orbit: {
     card: "/projects/orbit-3.jpg",
-    images: [
+    projectImages: [
+      "/projects/orbit-1.jpg",
+      "/projects/orbit-2.jpg",
+      "/projects/orbit-3.jpg",
+    ],
+    details: [
+      "/projects/orbit-6.jpg",
+      "/projects/orbit-5.jpg",
+      "/projects/orbit-4.jpg",
+    ],
+  },
+  portfolio: {
+    card: "/projects/orbit-3.jpg",
+    projectImages: [
       "/projects/orbit-1.jpg",
       "/projects/orbit-2.jpg",
       "/projects/orbit-3.jpg",

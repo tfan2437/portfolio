@@ -64,23 +64,46 @@ export type Translation = {
   };
 };
 
-export type BulletPoint = {
-  title: string;
-  description: string;
-};
-
 export type Project = {
   type: string;
   webDev: string;
   year: string;
   service: string;
   title: string;
-  summary: string;
-  techStack: BulletPoint[];
-  backend: BulletPoint[];
-  frontend: BulletPoint[];
-  devOps: BulletPoint[];
-  uiux: BulletPoint[];
-  achievements: string[];
-  impact: string[];
+  summary: string[];
+  topic: (Paragraph | Breakdown | BulletPoint | Image)[];
+};
+
+export type TopicType = "bullet-point" | "paragraph" | "breakdown" | "image";
+
+export type Paragraph = {
+  type: TopicType;
+  name: string;
+  paragraphs: string[];
+  details: Detail[];
+};
+
+export type Breakdown = {
+  type: TopicType;
+  name: string;
+  details: Detail[];
+};
+
+export type BulletPoint = {
+  type: TopicType;
+  name: string;
+  details: Detail[];
+};
+
+export type Image = {
+  type: TopicType;
+  name: string;
+  images: string[];
+  paragraphs: string[];
+  details: Detail[];
+};
+
+export type Detail = {
+  title: string;
+  description: string;
 };

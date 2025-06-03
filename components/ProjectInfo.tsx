@@ -3,13 +3,11 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { duration, ease } from "@/constants/animation";
 import { useProject, useTranslations } from "@/lib/store/useGlobal";
-import { PROJECTS_IMAGES } from "@/constants";
+import { Detail } from "@/types";
 
 const ProjectInfo = ({ name }: { name: string }) => {
   const { label } = useTranslations();
   const project = useProject(name);
-
-  const { details } = PROJECTS_IMAGES[name];
 
   return (
     <div className="w-full flex flex-col items-center px-8 lg:px-0 max-w-4xl select-none mt-6 sm:mt-10 mb-48">
@@ -25,23 +23,51 @@ const ProjectInfo = ({ name }: { name: string }) => {
         <Intro
           title={project.title}
           href={"https://www.orbits-ai.com"}
-          description={project.summary}
+          descriptions={project.summary}
           buttonText={label.viewWebsite}
         />
-        <BulletPoints title={label.techStack} points={project.techStack} />
-        <Summary title={label.backend} techs={project.backend} />
-        <Summary title={label.frontend} techs={project.frontend} />
-        <Summary title={label.devOps} techs={project.devOps} />
-        <div className="flex flex-col gap-8">
-          <ImagesDisplay images={details} />
-          <Summary title={label.uiux} techs={project.uiux} />
-        </div>
-
-        <Conclusion
-          title={label.achievements}
-          paragraphs={project.achievements}
-        />
-        <Conclusion title={label.impact} paragraphs={project.impact} />
+        {project.topic.map((topic, index) => {
+          if (topic.type === "bullet-point") {
+            return (
+              <BulletPoints
+                key={index}
+                topic={topic.name}
+                details={topic.details}
+              />
+            );
+          } else if (topic.type === "breakdown") {
+            return (
+              <Breakdown
+                key={index}
+                topic={topic.name}
+                details={topic.details}
+              />
+            );
+          } else if (
+            topic.type === "image" &&
+            "images" in topic &&
+            "details" in topic &&
+            "paragraphs" in topic
+          ) {
+            return (
+              <Images
+                key={index}
+                topic={topic.name}
+                images={topic.images}
+                paragraphs={topic.paragraphs}
+                details={topic.details}
+              />
+            );
+          } else if (topic.type === "paragraph" && "paragraphs" in topic) {
+            return (
+              <Paragraph
+                key={index}
+                topic={topic.name}
+                paragraphs={topic.paragraphs}
+              />
+            );
+          }
+        })}
       </motion.div>
     </div>
   );
@@ -52,12 +78,12 @@ export default ProjectInfo;
 const Intro = ({
   title,
   href,
-  description,
+  descriptions,
   buttonText,
 }: {
   title: string;
   href: string;
-  description: string;
+  descriptions: string[];
   buttonText: string;
 }) => {
   return (
@@ -81,54 +107,11 @@ const Intro = ({
           </Link>
         </div>
       </div>
-      <p className="text-neutral-700 text-base">{description}</p>
-    </div>
-  );
-};
 
-const BulletPoints = ({
-  title,
-  points,
-}: {
-  title: string;
-  points: {
-    title: string;
-    description: string;
-  }[];
-}) => {
-  return (
-    <div className="w-full flex flex-col gap-6">
-      <h2 className="font-semibold text-2xl">{title}</h2>
-      <ul className="list-disc list-inside flex flex-col gap-2 pl-1">
-        {points.map((point, index) => (
-          <li key={index}>
-            <span className="font-semibold">{point.title}</span>
-            <span className="text-neutral-700">{point.description}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-const Summary = ({
-  title,
-  techs,
-}: {
-  title: string;
-  techs: {
-    title: string;
-    description: string;
-  }[];
-}) => {
-  return (
-    <div className="w-full flex flex-col gap-6">
-      <h2 className="font-semibold text-2xl">{title}</h2>
       <div className="flex flex-col gap-4">
-        {techs.map((tech, index) => (
-          <p key={index} className="text-base text-neutral-700">
-            <span className="font-semibold text-black">{tech.title}</span>
-            {tech.description}
+        {descriptions.map((description, index) => (
+          <p key={index} className="text-neutral-700 text-base">
+            {description}
           </p>
         ))}
       </div>
@@ -136,16 +119,60 @@ const Summary = ({
   );
 };
 
-const Conclusion = ({
-  title,
+const BulletPoints = ({
+  topic,
+  details,
+}: {
+  topic: string;
+  details: Detail[];
+}) => {
+  return (
+    <div className="w-full flex flex-col gap-6">
+      <h2 className="font-semibold text-2xl">{topic}</h2>
+      <ul className="list-disc list-inside flex flex-col gap-2 pl-1">
+        {details.map((detail, index) => (
+          <li key={index}>
+            <span className="font-semibold">{detail.title}</span>
+            <span className="text-neutral-700">{detail.description}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const Breakdown = ({
+  topic,
+  details,
+}: {
+  topic: string;
+  details: Detail[];
+}) => {
+  return (
+    <div className="w-full flex flex-col gap-6">
+      <h2 className="font-semibold text-2xl">{topic}</h2>
+      <div className="flex flex-col gap-4">
+        {details.map((detail, index) => (
+          <p key={index} className="text-base text-neutral-700">
+            <span className="font-semibold text-black">{detail.title}</span>
+            {detail.description}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Paragraph = ({
+  topic,
   paragraphs,
 }: {
-  title: string;
+  topic: string;
   paragraphs: string[];
 }) => {
   return (
     <div className="w-full flex flex-col gap-6">
-      <h2 className="font-semibold text-2xl">{title}</h2>
+      <h2 className="font-semibold text-2xl">{topic}</h2>
       <div className="flex flex-col gap-4">
         {paragraphs.map((paragraph, index) => (
           <p key={index} className="text-base text-neutral-700">
@@ -157,19 +184,35 @@ const Conclusion = ({
   );
 };
 
-const ImagesDisplay = ({ images }: { images: string[] }) => {
+const Images = ({
+  topic,
+  images,
+  paragraphs,
+  details,
+}: {
+  topic: string;
+  images: string[];
+  paragraphs: string[];
+  details: Detail[];
+}) => {
   return (
-    <div className="w-full flex flex-col gap-4">
-      {images.map((path, index) => (
-        <Image
-          key={index}
-          src={path}
-          alt={"project image"}
-          width={900}
-          height={900}
-          className="w-full h-auto rounded-lg"
-        />
-      ))}
+    <div className="flex flex-col gap-8">
+      <div className="w-full flex flex-col gap-4">
+        {images.map((path, index) => (
+          <Image
+            key={index}
+            src={path}
+            alt={"project image"}
+            width={900}
+            height={900}
+            className="w-full h-auto rounded-lg"
+          />
+        ))}
+      </div>
+      {details.length > 0 && <Breakdown topic={topic} details={details} />}
+      {paragraphs.length > 0 && (
+        <Paragraph topic={topic} paragraphs={paragraphs} />
+      )}
     </div>
   );
 };

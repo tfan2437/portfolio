@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { EN, EN_PROJECTS } from "@/locales/en";
-import { ZH_TW, ZH_TW_PROJECTS } from "@/locales/zh-tw";
+import { EN, PROJECTS_EN } from "@/locales/en";
+import { ZH_TW, PROJECTS_ZHTW } from "@/locales/zh-tw";
 import { Locale } from "@/types";
 
 interface I18nStore {
@@ -36,8 +36,8 @@ export const useProject = (project: string) => {
   const { locale } = useI18nStore();
 
   const translations = {
-    en: EN_PROJECTS,
-    "zh-TW": ZH_TW_PROJECTS,
+    en: PROJECTS_EN,
+    "zh-TW": PROJECTS_ZHTW,
   };
 
   return translations[locale][
