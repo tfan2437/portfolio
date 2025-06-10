@@ -57,12 +57,12 @@ const ProjectImage = ({ name }: { name: string }) => {
         <div className="w-full sm:w-2/3 aspect-5/3 overflow-hidden rounded-lg">
           <Image
             src={images[0]}
-            alt={`${name} main preview`}
-            width={850}
-            height={520}
+            alt={"Project Preview"}
+            width={1800}
+            height={1164}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            draggable={false}
             priority={true}
-            quality={90}
           />
         </div>
 
@@ -70,24 +70,24 @@ const ProjectImage = ({ name }: { name: string }) => {
           <div className="w-full aspect-5/3 overflow-hidden rounded-lg">
             <Image
               src={images[1]}
-              alt={`${name} secondary preview`}
-              width={430}
-              height={260}
+              alt={"Project Preview"}
+              width={1200}
+              height={776}
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              loading="eager"
-              quality={85}
+              draggable={false}
+              priority={true}
             />
           </div>
 
           <div className="w-full aspect-5/3 overflow-hidden rounded-lg hidden sm:block">
             <Image
               src={images[2]}
-              alt={`${name} tertiary preview`}
-              width={430}
-              height={260}
+              alt={"Project Preview"}
+              width={1200}
+              height={776}
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              loading="eager"
-              quality={85}
+              draggable={false}
+              priority={true}
             />
           </div>
         </div>
