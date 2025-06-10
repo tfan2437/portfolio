@@ -82,7 +82,7 @@ const Intro = ({
   locale: Locale;
   name: string;
   title: string;
-  intro: string;
+  intro: string[];
 }) => {
   return (
     <div className="w-full flex flex-col">
@@ -95,7 +95,11 @@ const Intro = ({
       >
         {title}
       </p>
-      <p className="text-neutral-700 mt-3 text-sm">{intro}</p>
+      <div className="text-neutral-700 mt-3 text-sm flex flex-col gap-2">
+        {intro.map((desc, index) => (
+          <p key={index}>{desc}</p>
+        ))}
+      </div>
     </div>
   );
 };
@@ -112,7 +116,7 @@ const Job = ({
   company: string;
   title: string;
   date: string;
-  description: string;
+  description: string[];
   href: string;
 }) => {
   const isEn = locale === "en";
@@ -153,7 +157,11 @@ const Job = ({
       >
         {date}
       </span>
-      <p className="mt-3 text-sm">{description}</p>
+      <ul className="mt-3 text-sm">
+        {description.map((desc, index) => (
+          <li key={index}>{desc}</li>
+        ))}
+      </ul>
     </div>
   );
 };

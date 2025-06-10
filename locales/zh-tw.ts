@@ -20,30 +20,35 @@ export const ZH_TW: Translation = {
     me: {
       name: "范庭維",
       title: "全端軟體工程師",
-      intro:
-        "擅長 TypeScript、Java 和 Python，擁有使用 React、Next.js、Node.js 和 Spring Boot 構建可擴展網頁應用的經驗。熟練 AWS、Docker 和現代認證方法。在資料結構、演算法和提供高效、用戶導向的解決方案方面表現出色。",
+      intro: [
+        "具備豐富實戰經驗的全端開發者，擁有康乃爾大學學士學位，目前於喬治亞理工學院進修碩士，精通 TypeScript, Next.js、React、Node.js、Express 及 MongoDB，專長於設計與開發高效能以使用者為核心的網頁應用程式。作為工程開發核心並維運每日超過 10 萬活躍用戶的 AI 圖像生成平台，扮演全端關鍵角色，成功交付多項核心功能，有效支撐數百萬註冊用戶的穩定運行與快速成長。",
+        "擁有 AWS (S3, EC2, Lambda, CloudFront)、Docker、Jest 及自動化測試的實務經驗，能靈活應對雲端部署與持續整合挑戰。熟悉 Agile / Scrum 流程，擅長團隊溝通與快速交付，具備獨立開發與團隊協作的雙重能力。 熱衷於將革新技術與現代前後端架構結合，創造具影響力的數位產品。渴望在高速成長的團隊中發揮技術專業與創新思維，驅動產品價值最大化，成為企業數位轉型的關鍵推手。",
+      ],
     },
     jobs: [
       {
         title: "軟體工程師",
         company: "麒發科技 Architech AI",
         date: "十月 2024 - 至今",
-        description:
-          "麒發科技是一家專注於AI技術的科技公司，我們的使命是讓AI技術更易於使用，讓每個人都能享受到AI帶來的便利。",
+        description: [
+          "參與開發具 AI 協作功能的 Miro 風格畫布，採用 React Flow 實作，並針對即時渲染與全螢幕互動進行最佳化。主導負責產品主題風格全面改版，透過 A/B 測試有效提升用戶註冊率 10%，並使整體 UI 更符合現代設計趨勢。我獨立開發並成功推出「虛擬擺設」與「圖片轉影片」功能，大幅提升渲染品質，並透過自動播放預覽與優化排版，強化 Pro 等級升級轉換率。同時，我也打造了企業級的團隊管理系統，支援基於角色的權限控管與 Stripe 集中計費，並導入多圖輸入機制，提升跨房間視角的一致性與渲染表現。",
+        ],
       },
       {
         title: "初階建築師",
         company: "Robert A.M. Stern Architects",
         date: "四月 2022 - 八月 2024",
-        description:
-          "羅伯特·A·M·斯特恩建築師事務所是一家專注於建築設計的建築師事務所，我們的使命是讓建築設計更易於使用，讓每個人都能享受到建築設計帶來的便利。",
+        description: [
+          "將 Stable Diffusion 部署至本地伺服器，成功為公司節省六位數美金的 AI 授權支出。同時訓練專屬 LoRA 模型，並建立 3D 模型資產資料庫，供超過 200 位建築師使用，有效簡化設計流程並提升協作效率。",
+        ],
       },
       {
         title: "實習建築師",
         company: "九典聯合建築師事務所",
         date: "五月 2019 - 八月 2019",
-        description:
-          "九典聯合建築師事務所是一家專注於建築設計的建築師事務所，我們的使命是讓建築設計更易於使用，讓每個人都能享受到建築設計帶來的便利。",
+        description: [
+          "參與設計榮獲全國設計獎的醫學中心，並協助多項都市更新案，負責撰寫符合法規的技術圖說與施工文件，確保專案順利通過審核。",
+        ],
       },
     ],
     education: [
@@ -865,6 +870,114 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
         name: "影響",
         paragraphs: [
           "本平台為影視愛好者提供沉浸式內容探索體驗，完美結合即時資料擷取、用戶個人化系統與當代 UI 設計，充分體現針對互動式內容消費場景的全端開發專業度。",
+        ],
+        details: [],
+      },
+    ],
+  },
+  rerender: {
+    type: "公司產品",
+    webDev: "全端",
+    year: "2024 – 2025",
+    service: "AI 渲染應用",
+    title: "ReRender 與 ReRoom",
+    summary: [
+      "在 Architech AI，我擔任全端工程師，負責維護與開發公司旗艦的 AI 設計平台 ReRender 與 ReRoom，並在節奏快速的新創環境中協作推進。我參與整個產品生命週期的各個階段，從 UI/UX 構思、系統架構設計，到可擴展的功能實作與持續優化。",
+      "我使用的核心技術包括 React、Redux、TypeScript、Tailwind、Next.js、Node.js 與 向量資料庫，並特別重視撰寫具備類型安全性、可維護性與可擴展性的程式碼。我也透過 Jest 撰寫單元測試與整合測試，確保系統穩定性，並積極撰寫 技術文件、產品需求文件（PRD）與技術規格文件（TSD），以促進工程與產品團隊之間的協作與共識。",
+      "我熟悉 Scrum 與敏捷開發流程，不僅具備 帶領 Sprint 的經驗，也能在由他人主導的跨職能 Sprint 中積極投入並發揮價值。我參與並成功交付多項高影響力功能，整合先進的 AI 渲染模型與嵌入式資料流程，持續優化設計流程、提升使用者體驗，並推動具體的業務成效。",
+    ],
+    topic: [
+      {
+        type: "image",
+        name: "Board 多人協作 AI 版面功能",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-board-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-3.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-4.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-5.jpg",
+        ],
+        paragraphs: [
+          "這項功能是在我與工程團隊密切合作下完成的。我參與開發一套互動式畫布介面，支援協作式、節點導向的設計流程類似 Miro 或 Figma 的 FigJam，但專為建築與室內設計領域中的 AI 渲染應用所量身打造。",
+          "我負責設計與實作系統的核心部分，包括支援即時同步的 WebSocket 功能、前後端整合的畫布元件庫、以及使用者互動的樂觀 UI 更新機制。我設計了全新的版型，用於這項創新功能的首次發表，並基於 React Flow 延伸開發可重複使用的元件，以支援我們的 AI 渲染流程。",
+          "我的主要任務是整合渲染選單與節點互動邏輯，打造一套高度一致、直觀的 UI/UX 系統，確保使用者操作與 AI 模型的反應同步一致。這次經驗奠定了我在畫布式 UI 架構、即時協作設計模式與可擴展全端系統設計上的實力。如今，Board 功能已成為我們平台上推動創意協作的核心基礎。",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "Moodboard: 風格個人化開發",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-personalize-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-personalize-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-personalize-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-personalize-3.jpg",
+        ],
+        paragraphs: [
+          "為提升 AI 渲染流程的個人化程度，我獨立設計並開發了 Moodboard 情緒板功能，讓建築師與室內設計師能夠集中管理與重複使用他們收集的設計靈感。這項完整的功能開發涵蓋資料結構與 Schema 設計、前端介面實作，以及串接後端 AI 模型伺服器，以提供最佳化的使用者體驗。",
+          "我在象限型向量資料庫上建立了自訂的 CRUD 系統，透過向量點積相似度演算法，從使用者的情緒板中擷取最符合風格的參考圖片。此功能同時整合我們內部的圖像辨識與嵌入流程，實現高精度、風格一致的渲染結果。此功能迅速成為高階使用者的核心工具之一，也象徵著我在後端系統與資料庫整合能力上的重要突破，累積了實際操作向量演算法與生產環境部署經驗。",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "圖片轉影片渲染",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-video-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-video-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-video-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-video-3.jpg",
+        ],
+        paragraphs: [
+          "我重新設計並實作了圖片轉影片渲染功能，使用我們自研的 AI 影片生成模型，並直接串接 GPU 伺服器以產出高保真度的視覺內容。此功能升級解決了原始版本中的主要品質問題，重點改善視覺真實度、使用體驗以及商業轉換潛力。我加入了 相機視角的自動播放預覽功能，並設計了乾淨、沉浸式的 UI，無縫整合至渲染流程中。",
+          "我同時重構了首頁的影片模組，突顯 Pro 進階訂閱方案，進一步強化用戶轉換路徑。該功能廣受室內設計師好評，並成功帶動影片工具的使用率與留存率提升。這段經歷展現了我維護並優化既有功能的能力，能透過設計思維發掘功能潛力，同時兼顧使用者體驗與商業成長需求，推動產品持續進化。",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "虛擬佈置",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-staging-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-staging-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-staging-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-staging-3.jpg",
+        ],
+        paragraphs: [
+          "我獨立開發了虛擬佈置功能，針對房地產專業人士與居家用戶對速度、品質與真實感的需求進行設計與優化。此功能特別適合仲介在帶看時，透過行動裝置即時展示不同空間配置與風格的視覺效果。",
+          "為了提升使用靈活度與易用性，我實作了 三種參考風格輸入模式，分別對應不同層次的自訂需求。第一種為即選即用的熱門空間風格預設組合；第二種允許使用者上傳自選參考圖片，引導 AI 進行風格化佈置；第三種則內建圖像搜尋功能，讓使用者能直接從網路探索靈感並應用至空間設計中。",
+          "此功能大幅提升平台的創作彈性，展現了我在設計使用者導向功能、整合前端體驗與後端 AI 模型之間的協同能力，並能實際解決跨桌機與行動端的真實使用場景。",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "主題樣式改版與企業級 UI 設計領導經驗",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-theme-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-theme-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-theme-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-theme-3.jpg",
+        ],
+        paragraphs: [
+          "我主導了公司兩項核心產品 ReRender 和 ReRoom 以及一款新推出的企業級產品的 UI 全面改版。結合產業最佳實踐與現代設計趨勢，我提出並實作了從登入前到登入後所有頁面的版面與視覺更新。此次改版導入了極簡、全螢幕的介面風格，全面提升了產品在建築與室內設計領域的專業審美標準。",
+          "透過嚴謹的 A/B 測試，我們驗證了新版高質感視覺主題的成效，成功帶來超過統計顯著的使用者註冊成長。除了實作外，我也積極參與 Sprint 規劃與跨部門協作，展現我從概念到產品落地的 UI/UX 領導能力，結合設計思維與前端工程實力，推動整體產品體驗提升。",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "企業團隊訂閱管理與聯盟推廣功能",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-team-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-team-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-team-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-team-3.jpg",
+        ],
+        paragraphs: [
+          "我設計並開發了多項核心商業化功能，支援企業用戶的協作管理需求與社群推廣策略，成功擴展平台的收入來源與使用者成長潛力。在企業端，我獨立實作團隊帳單與權限管理功能前端，支援集中帳單管理、角色權限控制與 Stripe 整合。針對架構回饋，我主動重構元件結構，提升系統的可擴展性與維護性。此功能已廣泛被設計事務所與建築工作室採用。",
+          "同時，我也開發了彈性的聯盟推廣機制與響應式定價頁面，支援 KOL 與教育工作者透過用戶分類制度（Class-based Segmentation）提供專屬折扣與個人化價格顯示。這兩項功能大幅提升了轉換率與用戶覆蓋面，並展現了我將工程實作、商業策略與產品思維整合的能力，打造出具備成長導向與生產等級品質的基礎架構。",
         ],
         details: [],
       },

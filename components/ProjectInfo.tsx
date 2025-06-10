@@ -1,9 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { duration, ease } from "@/constants/animation";
 import { useProject, useTranslations } from "@/lib/store/useGlobal";
 import { Detail } from "@/types";
+import { twMerge } from "tailwind-merge";
 
 const ProjectInfo = ({ name }: { name: string }) => {
   const { label } = useTranslations();
@@ -197,15 +200,23 @@ const Images = ({
 }) => {
   return (
     <div className="flex flex-col gap-8">
-      <div className="w-full flex flex-col gap-4">
+      <div
+        className={twMerge(
+          "w-full",
+          images.length >= 4
+            ? "grid grid-cols-2 gap-2 mt-4"
+            : "flex flex-col gap-4"
+        )}
+      >
         {images.map((path, index) => (
           <Image
             key={index}
             src={path}
             alt={"project image"}
-            width={900}
-            height={580}
+            width={1200}
+            height={703}
             className="w-full h-auto rounded-lg"
+            draggable={false}
           />
         ))}
       </div>

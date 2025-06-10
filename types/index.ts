@@ -19,13 +19,13 @@ export type Translation = {
     me: {
       name: string;
       title: string;
-      intro: string;
+      intro: string[];
     };
     jobs: {
       title: string;
       company: string;
       date: string;
-      description: string;
+      description: string[];
     }[];
     education: {
       school: string;

@@ -94,19 +94,19 @@ export const PROJECT_CARDS: Record<string, string> = {
 
 export const PROJECTS_IMAGES: Record<string, string[]> = {
   sonicfi: [
-    "/projects/sonicfi-1.jpg",
-    "/projects/sonicfi-2.jpg",
-    "/projects/sonicfi-3.jpg",
+    "https://r2.tfan2437.workers.dev/projects/sonicfi-0.webp",
+    "https://r2.tfan2437.workers.dev/projects/sonicfi-1.webp",
+    "https://r2.tfan2437.workers.dev/projects/sonicfi-2.webp",
   ],
   orbit: [
-    "/projects/orbit-1.jpg",
-    "/projects/orbit-2.jpg",
-    "/projects/orbit-3.jpg",
+    "https://r2.tfan2437.workers.dev/projects/orbit-0.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-1.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-2.webp",
   ],
   "orbit-v1": [
-    "/projects/orbit-1.jpg",
-    "/projects/orbit-2.jpg",
-    "/projects/orbit-3.jpg",
+    "https://r2.tfan2437.workers.dev/projects/orbit-0.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-1.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-2.webp",
   ],
   tovier: [
     "https://r2.tfan2437.workers.dev/projects/tovier-0.webp",
@@ -114,13 +114,9 @@ export const PROJECTS_IMAGES: Record<string, string[]> = {
     "https://r2.tfan2437.workers.dev/projects/tovier-2.webp",
   ],
   portfolio: [
-    "/projects/orbit-1.jpg",
-    "/projects/orbit-2.jpg",
-    "/projects/orbit-3.jpg",
+    "https://r2.tfan2437.workers.dev/projects/orbit-0.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-1.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-2.webp",
   ],
-  rerender: [
-    "/projects/orbit-1.jpg",
-    "/projects/orbit-2.jpg",
-    "/projects/orbit-3.jpg",
-  ],
+  rerender: ["/rerender-0.jpg", "/rerender-1.jpg", "/rerender-2.jpg"],
 };

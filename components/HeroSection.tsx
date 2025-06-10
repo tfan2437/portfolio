@@ -29,9 +29,11 @@ const HeroSection = () => {
         transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         className="flex flex-row gap-4"
       >
-        <button className="bg-black mt-6 text-white px-4 py-1.5 w-fit rounded-lg cursor-pointer hover:bg-green hover:text-black border-2 border-black transition-colors duration-500">
-          <span className="font-semibold">{wording.nav.contactMe}</span>
-        </button>
+        <Link href={"mailto:tfan2437@gmail.com"} target="_blank">
+          <button className="bg-black mt-6 text-white px-4 py-1.5 w-fit rounded-lg cursor-pointer hover:bg-green hover:text-black border-2 border-black transition-colors duration-500">
+            <span className="font-semibold">{wording.nav.contactMe}</span>
+          </button>
+        </Link>
         <Link
           href={
             "https://drive.google.com/file/d/1n9QQK_M0fy6nKjCSRvyHGkV32jCkQSam/view"

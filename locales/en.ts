@@ -20,30 +20,34 @@ export const EN: Translation = {
     me: {
       name: "Ting Wei Fan",
       title: "Full Stack Software Engineer",
-      intro:
-        "Skilled in TypeScript, Java, and Python, with experience building scalable web apps using React, Next.js, Node.js, and Spring Boot. Proficient in AWS, Docker, and modern authentication methods. Strong in data structures, algorithms, and delivering performant, user-focused solutions.",
+      intro: [
+        "Versatile Fullstack Software Engineer with a Bachelor’s from Cornell University and currently pursuing a part-time Master’s at Georgia Tech. Experienced in building scalable, user-focused web applications for high-traffic AI platforms with millions of users. Strong background in cloud services, testing, and modern development practices. Combines technical execution with a keen eye for UI/UX to deliver impactful products in agile, fast-moving teams.",
+      ],
     },
     jobs: [
       {
         title: "Software Engineer",
         company: "Architech AI",
         date: "Oct 2024 - Present",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eligendi, quaerat a atque eaque quasi porro doloremque doloribus consectetur corporis accusamus architecto similique facilis at soluta ex facere fugiat rem.",
+        description: [
+          "I led the development of a collaborative, Miro-style canvas using React Flow, optimized for real-time rendering and fullscreen interaction. I spearheaded a theme redesign backed by A/B testing, increasing user registrations and modernizing our UI. I launched the Virtual Staging and Image-to-Video features—enhancing rendering quality and driving Pro-tier conversions through autoplay previews and optimized layouts. I also built enterprise-ready Team Management tools with role-based access and Stripe billing, and introduced a Multi-Image Input system to improve rendering consistency across rooms.",
+        ],
       },
       {
         title: "Junior Architect",
         company: "Robert A.M. Stern Architects",
         date: "April 2022 - Aug 2024",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eligendi, quaerat a atque eaque quasi porro doloremque doloribus consectetur corporis accusamus architecto similique facilis at soluta ex facere fugiat rem.",
+        description: [
+          "Cut AI costs by six figures by deploying Stable Diffusion in-house. Trained a custom LoRA model and built a 3D asset database used by 200+ architects to streamline design workflows.",
+        ],
       },
       {
         title: "Intern Architect",
         company: "Bio Architecture Formosana",
         date: "May 2019 - Aug 2019",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eligendi, quaerat a atque eaque quasi porro doloremque doloribus consectetur corporis accusamus architecto similique facilis at soluta ex facere fugiat rem.",
+        description: [
+          "Helped design a national award-winning hospital and supported urban renewal projects with detailed, regulation-ready technical plans.",
+        ],
       },
     ],
     education: [
@@ -63,38 +67,43 @@ export const EN: Translation = {
         date: "June 2016 - Dec 2021",
       },
     ],
+
+    // : Cloudflare,
+    //
+    // :
+    // Additional: Data Structure, Algorithms, Agile/Scrum, Performance Optimization, SEO
     techStacks: [
       {
         title: "Languages",
-        skills: "TypeScript, Java, Python, JavaScript, C++",
+        skills: "TypeScript, JavaScript, Java, Python, C++",
       },
       {
         title: "Frontend",
-        skills: "Next.js, React, Redux, Zustand, Tailwind CSS",
+        skills: "Next.js, React, Redux, Zustand, Tailwind CSS, Sass, HTML, CSS",
       },
       {
         title: "Backend",
-        skills: "Node.js, Express.js, Spring Boot",
-      },
-      {
-        title: "Communication",
-        skills: "RESTful APIs, WebSockets",
+        skills: "Spring Boot, Node.js, Express.js, RESTful APIs, WebSockets",
       },
       {
         title: "Authentication",
-        skills: "JWT, OAuth, Firebase Auth, Next Auth",
+        skills: "JWT, OAuth 2.0, Firebase Auth, NextAuth.js",
       },
       {
         title: "Databases",
-        skills: "MongoDB, PostgreSQL, MySQL",
+        skills: "MongoDB, PostgreSQL, Redis",
       },
       {
-        title: "DevOps",
-        skills: "Git, Docker, AWS S3, AWS EC2, AWS Lambda",
+        title: "Testing & Build",
+        skills: "Jest, Unit Testing, Vite, npm, yarn, ESLint",
       },
       {
-        title: "Testing",
-        skills: "Jest, Unit Testing",
+        title: "Version Control & CI/CD",
+        skills: "Docker, Nginx, Git, GitHub, Linux, Shell Scripting",
+      },
+      {
+        title: "Cloud",
+        skills: "Cloudflare, AWS S3, AWS EC2, AWS Lambda, AWS CloudFront",
       },
       {
         title: "Concept",
@@ -871,12 +880,113 @@ export const PROJECTS_EN: Record<string, Project> = {
       },
     ],
   },
-};
-
-const temp = {
-  type: "image",
-  name: "UI/UX Design",
-  images: [],
-  paragraphs: [],
-  details: [],
+  rerender: {
+    type: "Company Product",
+    webDev: "Full Stack",
+    year: "2024 – 2025",
+    service: "AI Rendering Application",
+    title: "ReRender and ReRoom",
+    summary: [
+      "At Architech AI, I work as a full stack engineer maintaining and developing our flagship AI-powered design platforms —ReRender and ReRoom— within a fast-paced startup environment. I contribute across the full product lifecycle, from UI/UX ideation and architectural planning to scalable implementation and continuous iteration.",
+      "My core tech stack includes React, Redux, TypeScript, Tailwind, Next.js, Node.js, and vector databases, with a strong emphasis on type-safe, maintainable code at scale. I write unit and integration tests using Jest to ensure reliability, and actively produce technical documentation, PRDs, and TSDs to support alignment across engineering and product teams.",
+      "I’m well-versed in Scrum and Agile development, with experience both leading sprints and contributing meaningfully to cross-functional sprints led by others. I’ve helped deliver high-impact features that integrate advanced AI rendering models and embedding pipelines, improving creative workflows, enhancing user experience, and driving measurable business outcomes.",
+    ],
+    topic: [
+      {
+        type: "image",
+        name: "Board: Miro-Style Collaborative AI Canvas",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-board-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-3.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-4.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-board-5.jpg",
+        ],
+        paragraphs: [
+          "This feature was completed through close team collaboration. I contributed to the development of an interactive canvas interface that enables collaborative, node-based design—similar to Miro but powered by AI rendering capabilities.",
+          "My primary focus was on render menu integration and node interaction, covering both frontend and backend implementation. I reused and enhanced layouts from my previous enterprise UI design to support preset visibility, fullscreen mode, and streamlined configuration.",
+          "I also built a reusable, high-quality component system for node display, ensuring that user inputs and AI-generated outputs were visually aligned and intuitive. This maximized creative control and contributed to a more responsive, team-based design experience. The Board now serves as a foundational feature that powers real-time collaboration on our platform.",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "Moodboard Personalization for AI Style Control",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-personalize-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-personalize-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-personalize-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-personalize-3.jpg",
+        ],
+        paragraphs: [
+          "To enhance personalization in AI-driven rendering workflows, I independently designed and built the Moodboard feature—allowing architects and designers to centralize and reuse visual inspiration. This end-to-end project involved UI/UX ideation, schema design, and full-stack implementation.",
+          "I developed a custom CRUD system atop a quadrant-based vector database, using dot product similarity to retrieve the most relevant reference images from a user’s moodboard. By integrating our internal image recognition and embedding pipeline, the system enabled highly accurate, style-consistent rendering.",
+          "The feature saw rapid adoption and became a core part of the creative workflow for power users. It also marked a major milestone in my evolution as a full stack engineer, showcasing my ability to deliver technically sophisticated, user-centered solutions.",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "Image-to-Video Rendering",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-video-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-video-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-video-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-video-3.jpg",
+        ],
+        paragraphs: [
+          "I redesigned and implemented the Image-to-Video feature using our proprietary AI video generation model, integrating directly with our GPU server to deliver high-fidelity video outputs. This enhancement addressed major quality issues in the original implementation and introduced improvements focused on visual realism, usability, and monetization potential. I added auto-play hover previews for each camera motion preset and designed a clean, immersive UI that integrates seamlessly into the rendering workflow.",
+          "In addition, I restructured the homepage video module to prominently showcase Pro-tier offerings, aligning with our conversion funnel and driving increased subscription interest. The feature received strong positive feedback from interior designers and led to a noticeable rise in video tool engagement and user retention. This experience demonstrated my ability to maintain and iterate on existing features, uncover new potential through design thinking, and evolve core functionality in support of both user satisfaction and business growth.",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "Virtual Staging",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-staging-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-staging-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-staging-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-staging-3.jpg",
+        ],
+        paragraphs: [
+          "I independently developed the Virtual Staging feature to meet the speed, quality, and realism expectations of both real estate professionals and homeowners. This feature is especially valuable for brokers using mobile devices to present live staging options to potential buyers or tenants during on-site visits.",
+          "To deliver an intuitive and adaptable experience, I implemented a three-mode reference system that supports various levels of user control. The first mode offers curated interior style presets for immediate application. The second allows users to upload custom reference images to guide AI staging. The third introduces a built-in image search function, enabling users to explore inspiration directly from the internet and apply those styles to their spaces using AI.",
+          "This feature greatly expanded the platform’s creative flexibility and showcased my ability to design user-centered experiences that integrate seamlessly with AI-driven pipelines—balancing frontend usability, backend connectivity, and real-world user needs.",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "Leadership in Theme Redesign and Enterprise UI",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-theme-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-theme-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-theme-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-theme-3.jpg",
+        ],
+        paragraphs: [
+          "I led the complete UI overhaul of both our ReRender/ReRoom platforms and a new enterprise-only product. Leveraging industry insights and modern design references, I proposed and implemented layout and aesthetic upgrades across the full suite of pre- and post-login pages. The redesign introduced a clean, full-screen interface aligned with high-end visual standards in architecture and design.",
+          "Through rigorous A/B testing, we validated these changes, resulting in a statistically significant increase in user registrations. This experience demonstrated my ability to lead large-scale UI/UX initiatives from concept to production—blending visual strategy with hands-on frontend engineering.",
+        ],
+        details: [],
+      },
+      {
+        type: "image",
+        name: "Organization Subscription Management & Affiliate Program",
+        images: [
+          "https://r2.tfan2437.workers.dev/products/rerender-team-0.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-team-1.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-team-2.jpg",
+          "https://r2.tfan2437.workers.dev/products/rerender-team-3.jpg",
+        ],
+        paragraphs: [
+          "I developed and launched core monetization features supporting both enterprise collaboration and community-driven growth. For enterprise users, I built the full frontend for our Team Billing and Role Management system—supporting centralized billing, role-based access control, and Stripe integration. After receiving feedback on component architecture, I took initiative to refactor the structure for scalability and maintainability. The feature became widely adopted by agencies and studios.",
+          "In parallel, I built a flexible affiliate program and responsive pricing page, enabling tailored discounting for KOLs and educators via class-based user segmentation. Together, these systems increased conversion, expanded our audience reach, and demonstrated my ability to deliver production-ready, growth-oriented infrastructure that bridges engineering and business.",
+        ],
+        details: [],
+      },
+    ],
+  },
 };

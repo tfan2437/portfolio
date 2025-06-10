@@ -1,27 +1,8 @@
-"use client";
-
 import ProjectImage from "@/components/ProjectImage";
 import ProjectInfo from "@/components/ProjectInfo";
 import ProjectsDisplay from "@/components/ProjectsDisplay";
-import { useParams, useRouter } from "next/navigation";
-import { useEffect, useMemo } from "react";
 
-const Project = () => {
-  const router = useRouter();
-  const { name } = useParams<{ name: string }>();
-
-  const valid = useMemo(
-    () => ["sonicfi", "orbit", "portfolio", "rerender", "tovier", "orbit-v1"],
-    []
-  );
-
-  useEffect(() => {
-    if (!valid.includes(name)) {
-      router.push("/");
-    }
-  }, [router, name, valid]);
-
-  if (!valid.includes(name)) return null;
+const Project = ({ name }: { name: string }) => {
   return (
     <div className="w-full flex flex-col items-center">
       <ProjectImage name={name} />
@@ -30,4 +11,5 @@ const Project = () => {
     </div>
   );
 };
+
 export default Project;
