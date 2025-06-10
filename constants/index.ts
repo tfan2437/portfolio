@@ -93,21 +93,9 @@ export const PROJECT_CARDS: Record<string, string> = {
 };
 
 export const PROJECTS_IMAGES: Record<string, string[]> = {
-  sonicfi: [
-    "https://r2.tfan2437.workers.dev/projects/sonicfi-0.webp",
-    "https://r2.tfan2437.workers.dev/projects/sonicfi-1.webp",
-    "https://r2.tfan2437.workers.dev/projects/sonicfi-2.webp",
-  ],
-  orbit: [
-    "https://r2.tfan2437.workers.dev/projects/orbit-0.webp",
-    "https://r2.tfan2437.workers.dev/projects/orbit-1.webp",
-    "https://r2.tfan2437.workers.dev/projects/orbit-2.webp",
-  ],
-  "orbit-v1": [
-    "https://r2.tfan2437.workers.dev/projects/orbit-0.webp",
-    "https://r2.tfan2437.workers.dev/projects/orbit-1.webp",
-    "https://r2.tfan2437.workers.dev/projects/orbit-2.webp",
-  ],
+  sonicfi: ["/sonicfi-0.jpg", "/sonicfi-1.jpg", "/sonicfi-2.jpg"],
+  orbit: ["/orbit-0.jpg", "/orbit-1.jpg", "/orbit-2.jpg"],
+  "orbit-v1": ["/orbit-v1-0.jpg", "/orbit-v1-1.jpg", "/orbit-v1-2.jpg"],
   tovier: [
     "https://r2.tfan2437.workers.dev/projects/tovier-0.webp",
     "https://r2.tfan2437.workers.dev/projects/tovier-1.webp",

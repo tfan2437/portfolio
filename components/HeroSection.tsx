@@ -16,7 +16,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeIn" }}
+        transition={{ duration: 1, ease: "easeIn", delay: 0.2 }}
       >
         <p className="text-4xl font-semibold leading-12 whitespace-pre-line">
           {wording.intro.greeting}
@@ -26,7 +26,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
         className="flex flex-row gap-4"
       >
         <Link href={"mailto:tfan2437@gmail.com"} target="_blank">

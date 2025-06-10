@@ -25,9 +25,9 @@ const ProjectInfo = ({ name }: { name: string }) => {
       >
         <Intro
           title={project.title}
-          href={"https://www.orbits-ai.com"}
+          href={project.href}
           descriptions={project.summary}
-          buttonText={label.viewWebsite}
+          buttonText={label.liveDemo}
         />
         {project.topic.map((topic, index) => {
           if (topic.type === "bullet-point") {
@@ -59,6 +59,7 @@ const ProjectInfo = ({ name }: { name: string }) => {
                 images={topic.images}
                 paragraphs={topic.paragraphs}
                 details={topic.details}
+                showGrid={name === "rerender"}
               />
             );
           } else if (topic.type === "paragraph" && "paragraphs" in topic) {
@@ -93,7 +94,7 @@ const Intro = ({
     <div className="flex flex-col gap-8">
       <div className="flex flex-col-reverse sm:flex-row gap-4 sm:gap-0 sm:justify-between sm:items-center">
         <h1 className="font-semibold text-3xl">{title}</h1>
-        <div className="flex flex-row gap-2 items-center">
+        <div className="flex flex-row gap-1 items-center">
           <Link
             href={href}
             target="_blank"
@@ -113,7 +114,7 @@ const Intro = ({
 
       <div className="flex flex-col gap-4">
         {descriptions.map((description, index) => (
-          <p key={index} className="text-neutral-700 text-base">
+          <p key={index} className="text-neutral-900 text-base">
             {description}
           </p>
         ))}
@@ -136,7 +137,7 @@ const BulletPoints = ({
         {details.map((detail, index) => (
           <li key={index}>
             <span className="font-semibold">{detail.title}</span>
-            <span className="text-neutral-700">{detail.description}</span>
+            <span className="text-neutral-900">{detail.description}</span>
           </li>
         ))}
       </ul>
@@ -156,7 +157,7 @@ const Breakdown = ({
       <h2 className="font-semibold text-2xl">{topic}</h2>
       <div className="flex flex-col gap-4">
         {details.map((detail, index) => (
-          <p key={index} className="text-base text-neutral-700">
+          <p key={index} className="text-base text-neutral-900">
             <span className="font-semibold text-black">{detail.title}</span>
             {detail.description}
           </p>
@@ -178,7 +179,7 @@ const Paragraph = ({
       <h2 className="font-semibold text-2xl">{topic}</h2>
       <div className="flex flex-col gap-4">
         {paragraphs.map((paragraph, index) => (
-          <p key={index} className="text-base text-neutral-700">
+          <p key={index} className="text-base text-neutral-900">
             {paragraph}
           </p>
         ))}
@@ -192,18 +193,20 @@ const Images = ({
   images,
   paragraphs,
   details,
+  showGrid = false,
 }: {
   topic: string;
   images: string[];
   paragraphs: string[];
   details: Detail[];
+  showGrid: boolean;
 }) => {
   return (
     <div className="flex flex-col gap-8">
       <div
         className={twMerge(
           "w-full",
-          images.length >= 4
+          images.length >= 4 && showGrid
             ? "grid grid-cols-2 gap-2 mt-4"
             : "flex flex-col gap-4"
         )}

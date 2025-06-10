@@ -58,8 +58,8 @@ const ProjectImage = ({ name }: { name: string }) => {
           <Image
             src={images[0]}
             alt={"Project Preview"}
-            width={1800}
-            height={1164}
+            width={1700}
+            height={1100}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             draggable={false}
             priority={true}
@@ -71,8 +71,8 @@ const ProjectImage = ({ name }: { name: string }) => {
             <Image
               src={images[1]}
               alt={"Project Preview"}
-              width={1200}
-              height={776}
+              width={860}
+              height={556}
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               draggable={false}
               priority={true}
@@ -83,8 +83,8 @@ const ProjectImage = ({ name }: { name: string }) => {
             <Image
               src={images[2]}
               alt={"Project Preview"}
-              width={1200}
-              height={776}
+              width={860}
+              height={556}
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               draggable={false}
               priority={true}

@@ -60,11 +60,12 @@ export type Translation = {
     uiux: string;
     achievements: string;
     impact: string;
-    viewWebsite: string;
+    liveDemo: string;
   };
 };
 
 export type Project = {
+  href: string;
   type: string;
   webDev: string;
   year: string;

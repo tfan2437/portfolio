@@ -149,12 +149,13 @@ export const ZH_TW: Translation = {
     uiux: "UI/UX 設計",
     achievements: "成果",
     impact: "影響",
-    viewWebsite: "前往應用",
+    liveDemo: "前往應用",
   },
 };
 
 export const PROJECTS_ZHTW: Record<string, Project> = {
   portfolio: {
+    href: "https://www.tingweifan.com",
     type: "個人專案",
     webDev: "前端開發",
     year: "2025",
@@ -280,6 +281,7 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
     ],
   },
   sonicfi: {
+    href: "https://www.sonic-fi.com",
     type: "個人專案",
     webDev: "全端",
     year: "2025",
@@ -401,8 +403,10 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
         ],
       },
       {
-        type: "breakdown",
+        type: "image",
         name: "UI/UX 設計",
+        images: ["/sonicfi-3.jpg", "/sonicfi-4.jpg"],
+        paragraphs: [],
         details: [
           {
             title: "現代界面設計: ",
@@ -442,11 +446,12 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
     ],
   },
   orbit: {
+    href: "https://www.orbits-ai.com",
     type: "個人專案",
     webDev: "全端",
     year: "2025",
-    service: "AI 聊天應用",
-    title: "Orbit AI 聊天應用",
+    service: "AI 對話式應用",
+    title: "Orbit — AI 對話式應用",
     summary: [
       "一個利用 Google Gemini 2.0 Flash 進行文字生成和圖像合成的先進對話式 AI 平台，具備企業級安全性和可擴展性。此項目展示了在安全後端開發、高效資料庫設計、動態前端實現與穩健狀態管理以及流暢的 CI/CD 管道方面的專業知識，提供無縫且引人入勝的使用者體驗。",
     ],
@@ -612,11 +617,12 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
     ],
   },
   "orbit-v1": {
+    href: "https://orbit-ai-chatbot.vercel.app",
     type: "個人專案",
     webDev: "全端",
     year: "2024",
-    service: "AI 聊天應用",
-    title: "Orbit v1 — AI 聊天應用",
+    service: "AI 對話式應用",
+    title: "Orbit v1 — AI 對話式應用",
     summary: [
       "作為 Orbit AI 系列的首個版本，此專案奠定對話式 AI 平台的基礎架構，採用 Firebase 與 Context API 實現快速迭代開發。雖具備流暢的即時對話體驗與精緻用戶介面，相較於後續企業級規格的 v2 版本，尚未引入 Redux 狀態管理、JWT 加密的 Express API、MongoDB 索引優化、圖像生成功能及 Docker 化 AWS 部署等高階功能。",
       "這款先進 AI 聊天機器人應用程式，專為跨網頁與行動平台打造無縫互動體驗，展現 AI API 整合能力、安全的用戶管理系統與響應式 UI 設計，突顯開發者在即時資料處理與現代化部署的專業實力。",
@@ -713,8 +719,10 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
         ],
       },
       {
-        type: "breakdown",
+        type: "image",
         name: "UI/UX 設計",
+        images: ["/orbit-v1-5.jpg", "/orbit-v1-4.jpg", "/orbit-v1-3.jpg"],
+        paragraphs: [],
         details: [
           {
             title: "現代化視覺語言: ",
@@ -747,6 +755,7 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
     ],
   },
   tovier: {
+    href: "https://tovier-trailer.vercel.app",
     type: "個人專案",
     webDev: "全端",
     year: "2024",
@@ -876,6 +885,7 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
     ],
   },
   rerender: {
+    href: "https://rerenderai.com",
     type: "公司產品",
     webDev: "全端",
     year: "2024 – 2025",

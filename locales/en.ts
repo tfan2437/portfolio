@@ -153,12 +153,13 @@ export const EN: Translation = {
     uiux: "UI/UX Design",
     achievements: "Achievements",
     impact: "Impact",
-    viewWebsite: "View Website",
+    liveDemo: "Live Demo",
   },
 };
 
 export const PROJECTS_EN: Record<string, Project> = {
   portfolio: {
+    href: "https://www.tingweifan.com",
     type: "Personal Project",
     webDev: "Frontend",
     year: "2025",
@@ -284,6 +285,7 @@ export const PROJECTS_EN: Record<string, Project> = {
     ],
   },
   sonicfi: {
+    href: "https://www.sonic-fi.com",
     type: "Personal Project",
     webDev: "Full Stack",
     year: "2025",
@@ -405,8 +407,10 @@ export const PROJECTS_EN: Record<string, Project> = {
         ],
       },
       {
-        type: "breakdown",
+        type: "image",
         name: "UI/UX Design",
+        images: ["/sonicfi-3.jpg", "/sonicfi-4.jpg"],
+        paragraphs: [],
         details: [
           {
             title: "Modern Interface Design: ",
@@ -446,11 +450,12 @@ export const PROJECTS_EN: Record<string, Project> = {
     ],
   },
   orbit: {
+    href: "https://www.orbits-ai.com",
     type: "Personal Project",
     webDev: "Full Stack",
     year: "2025",
-    service: "AI Chat Application",
-    title: "Orbit – AI Chat Application",
+    service: "Conversational AI Chat",
+    title: "Orbit – Conversational AI Chat",
     summary: [
       "A sophisticated conversational AI platform leveraging Google's Gemini 2.0 Flash for text generation and image synthesis, built with enterprise-grade security and scalability. This project showcases expertise in secure backend development, efficient database design, dynamic frontend implementation with robust state management, and streamlined CI/CD pipelines, delivering a seamless and engaging user experience.",
     ],
@@ -578,8 +583,15 @@ export const PROJECTS_EN: Record<string, Project> = {
         ],
       },
       {
-        type: "breakdown",
+        type: "image",
         name: "UI/UX Design",
+        images: [
+          "/orbit-3.jpg",
+          "/orbit-4.jpg",
+          "/orbit-5.jpg",
+          "/orbit-6.jpg",
+        ],
+        paragraphs: [],
         details: [
           {
             title: "Containerized Deployment: ",
@@ -617,11 +629,12 @@ export const PROJECTS_EN: Record<string, Project> = {
     ],
   },
   "orbit-v1": {
+    href: "https://orbit-ai-chatbot.vercel.app",
     type: "Personal Project",
     webDev: "Full Stack",
     year: "2024",
-    service: "AI Chat Application",
-    title: "Orbit v1 – AI Chat Application",
+    service: "Conversational AI Chat",
+    title: "Orbit v1 – Conversational AI Chat",
     summary: [
       "This version of Orbit AI laid the groundwork for the conversational AI platform, focusing on rapid development with Firebase and Context API. While it offered a polished user experience and seamless real-time chat, it lacks the enterprise-grade features introduced in Orbit AI v2—such as Redux for scalable state management, JWT-secured Express APIs, MongoDB indexing, image generation support, and Dockerized AWS deployment.",
       "An advanced AI chatbot application built to deliver a seamless, interactive experience across web and mobile platforms. The project demonstrates strong integration of AI APIs, secure user management, and responsive UI design, highlighting proficiency in real-time data handling and modern deployment practices.",
@@ -718,8 +731,10 @@ export const PROJECTS_EN: Record<string, Project> = {
         ],
       },
       {
-        type: "breakdown",
+        type: "image",
         name: "UI/UX Design",
+        images: ["/orbit-v1-5.jpg", "/orbit-v1-4.jpg", "/orbit-v1-3.jpg"],
+        paragraphs: [],
         details: [
           {
             title: "Modern Visuals: ",
@@ -752,6 +767,7 @@ export const PROJECTS_EN: Record<string, Project> = {
     ],
   },
   tovier: {
+    href: "https://tovier-trailer.vercel.app",
     type: "Personal Project",
     webDev: "Full Stack",
     year: "2024",
@@ -881,6 +897,7 @@ export const PROJECTS_EN: Record<string, Project> = {
     ],
   },
   rerender: {
+    href: "https://rerenderai.com",
     type: "Company Product",
     webDev: "Full Stack",
     year: "2024 – 2025",
