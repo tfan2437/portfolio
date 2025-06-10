@@ -12,7 +12,7 @@ const PREVIEW_PREFIX: string =
 export const PROJECTS_INFO: ProjectInfo[] = [
   {
     year: 2025,
-    name: "SonicFi Music",
+    name: "Sonicfi",
     href: "sonic-fi.com",
     link: "/project/sonicfi",
     previews: [
@@ -24,7 +24,7 @@ export const PROJECTS_INFO: ProjectInfo[] = [
   {
     year: 2025,
     name: "Orbit AI",
-    href: "https://www.orbits-ai.com",
+    href: "orbits-ai.com",
     link: "/project/orbit",
     previews: [
       `${PREVIEW_PREFIX}orbit-0.webp`,
@@ -35,7 +35,7 @@ export const PROJECTS_INFO: ProjectInfo[] = [
   {
     year: 2025,
     name: "Portfolio",
-    href: "https://www.orbits-ai.com",
+    href: "tingweifan.com",
     link: "/project/portfolio",
     previews: [
       `${PREVIEW_PREFIX}orbit-0.webp`,
@@ -45,9 +45,9 @@ export const PROJECTS_INFO: ProjectInfo[] = [
   },
   {
     year: 2024,
-    name: "ReRender AI",
+    name: "ReRender",
     href: "rerenderai.com",
-    link: "/project/rerender-ai",
+    link: "/project/rerender",
     previews: [
       `${PREVIEW_PREFIX}rerender-0.webp`,
       `${PREVIEW_PREFIX}rerender-1.webp`,
@@ -56,9 +56,9 @@ export const PROJECTS_INFO: ProjectInfo[] = [
   },
   {
     year: 2024,
-    name: "Tovier Trailer",
+    name: "Tovier",
     href: "tovier-trailer.vercel.app",
-    link: "/project/tovier-trailer",
+    link: "/project/tovier",
     previews: [
       `${PREVIEW_PREFIX}tovier-0.webp`,
       `${PREVIEW_PREFIX}tovier-1.webp`,
@@ -67,9 +67,9 @@ export const PROJECTS_INFO: ProjectInfo[] = [
   },
   {
     year: 2024,
-    name: "Orbit AI v1",
+    name: "Orbit v1",
     href: "orbit-ai-chatbot.vercel.app",
-    link: "/project/orbit-ai-v1",
+    link: "/project/orbit-v1",
     previews: [
       `${PREVIEW_PREFIX}orbit-v1-0.webp`,
       `${PREVIEW_PREFIX}orbit-v1-1.webp`,

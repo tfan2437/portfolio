@@ -6,8 +6,10 @@ import { useState } from "react";
 import type { ProjectInfo } from "@/constants";
 import { PROJECTS_INFO } from "@/constants";
 import Image from "next/image";
+import { useTranslations } from "@/lib/store/useGlobal";
 
 const ProjectsDisplay = () => {
+  const { label } = useTranslations();
   return (
     <div
       id="projects"
@@ -19,7 +21,7 @@ const ProjectsDisplay = () => {
             <div className="size-4 bg-neutral-300 rounded-full flex items-center justify-center">
               <div className="size-[6px] bg-neutral-600 rounded-full" />
             </div>
-            <h1 className="text-base font-semibold">Selected Projects</h1>
+            <h1 className="text-base font-semibold">{label.selectedWorks}</h1>
           </div>
         </div>
         <div className="w-full flex flex-col select-none">
@@ -114,6 +116,9 @@ const AnimatedSquares = ({ previews }: { previews: string[] }) => {
               width={160}
               height={160}
               className="rounded-lg w-full h-full object-cover"
+              quality={85}
+              draggable={false}
+              priority
             />
           </motion.div>
         ))}
