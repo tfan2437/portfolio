@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 import { useTranslations } from "@/lib/store/useGlobal";
 
 const ProjectSection = () => {
-  const { projects } = useTranslations();
+  const { projects, label } = useTranslations();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
 
@@ -18,11 +18,11 @@ const ProjectSection = () => {
             <div className="size-4 bg-neutral-300 rounded-full flex items-center justify-center">
               <div className="size-[6px] bg-neutral-600 rounded-full" />
             </div>
-            <h1 className="text-base font-semibold">Selected Projects</h1>
+            <h1 className="text-base font-semibold">{label.selectedWorks}</h1>
           </div>
           <div className="items-center gap-10 hidden sm:flex">
             <span className="text-sm text-neutral-700 font-semibold">{`(2024 - 2025)`}</span>
-            <span className="text-sm text-neutral-700">Fullstack Web</span>
+            <span className="text-sm text-neutral-700">{label.fullstack}</span>
           </div>
         </div>
         <div

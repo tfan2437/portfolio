@@ -23,7 +23,7 @@ export const EN: Translation = {
       name: "Ting Wei Fan",
       title: "Full Stack Software Engineer",
       intro: [
-        "Versatile Fullstack Software Engineer with a Bachelor’s from Cornell University and currently pursuing a part-time Master’s at Georgia Tech. Experienced in building scalable, user-focused web applications for high-traffic AI platforms with millions of users. Strong background in cloud services, testing, and modern development practices. Combines technical execution with a keen eye for UI/UX to deliver impactful products in agile, fast-moving teams.",
+        "Proven expert in developing scalable, user-centric web applications for an AI image-generating platform, serving millions of registered users and hundreds of thousands of daily active users. Skilled in delivering innovative, high-impact solutions in fast-paced, agile environments. Passionate about driving product excellence within collaborative teams.",
       ],
     },
     jobs: [
@@ -31,24 +31,28 @@ export const EN: Translation = {
         title: "Software Engineer",
         company: "Architech AI",
         date: "Oct 2024 - Present",
+        linkedin: "https://www.linkedin.com/company/architechtw",
         description: [
-          "I led the development of a collaborative, Miro-style canvas using React Flow, optimized for real-time rendering and fullscreen interaction. I spearheaded a theme redesign backed by A/B testing, increasing user registrations and modernizing our UI. I launched the Virtual Staging and Image-to-Video features—enhancing rendering quality and driving Pro-tier conversions through autoplay previews and optimized layouts. I also built enterprise-ready Team Management tools with role-based access and Stripe billing, and introduced a Multi-Image Input system to improve rendering consistency across rooms.",
+          "Spearheaded a product-wide theme redesign that modernized the UI, improved brand alignment, and resulted in a 10%+ increase in user registrations through A/B testing. Built a Miro-style AI canvas using WebSocket and React Flow, integrating real-time collaborative rendering controls and optimizing the menu system for usability.",
         ],
       },
       {
         title: "Junior Architect",
         company: "Robert A.M. Stern Architects",
         date: "April 2022 - Aug 2024",
+        linkedin: "https://www.linkedin.com/company/ramsa",
         description: [
-          "Cut AI costs by six figures by deploying Stable Diffusion in-house. Trained a custom LoRA model and built a 3D asset database used by 200+ architects to streamline design workflows.",
+          "Deployed Stable Diffusion on a private server, eliminating reliance on third-party services and reducing annual AI subscription costs by over $100,000 across 200+ architect accounts.",
         ],
       },
       {
         title: "Intern Architect",
         company: "Bio Architecture Formosana",
         date: "May 2019 - Aug 2019",
+        linkedin:
+          "https://www.linkedin.com/company/bio-architecture-formosana-taiwan/posts",
         description: [
-          "Helped design a national award-winning hospital and supported urban renewal projects with detailed, regulation-ready technical plans.",
+          "Contributed significantly to visual representation for the Cheng Kung University Senior Hospital concept competition, leading to a winning proposal and securing the project for the firm.",
         ],
       },
     ],
@@ -60,7 +64,7 @@ export const EN: Translation = {
       },
       {
         school: "Empire State University",
-        degree: "Master Prerequisite - Computer Science",
+        degree: "Computer Science Master Prerequisite",
         date: "Jan 2024 - May 2024",
       },
       {
@@ -69,11 +73,6 @@ export const EN: Translation = {
         date: "June 2016 - Dec 2021",
       },
     ],
-
-    // : Cloudflare,
-    //
-    // :
-    // Additional: Data Structure, Algorithms, Agile/Scrum, Performance Optimization, SEO
     techStacks: [
       {
         title: "Languages",
@@ -100,16 +99,17 @@ export const EN: Translation = {
         skills: "Jest, Unit Testing, Vite, npm, yarn, ESLint",
       },
       {
-        title: "Version Control & CI/CD",
-        skills: "Docker, Nginx, Git, GitHub, Linux, Shell Scripting",
+        title: "Version Control & DevOps",
+        skills: "Git, GitHub, Linux, Shell Scripting, Nginx, Docker",
       },
       {
         title: "Cloud",
-        skills: "Cloudflare, AWS S3, AWS EC2, AWS Lambda, AWS CloudFront",
+        skills: "Cloudflare R2, AWS S3, AWS EC2, AWS Lambda, AWS CloudFront",
       },
       {
-        title: "Concept",
-        skills: "Data Structures, Algorithms",
+        title: "Additional",
+        skills:
+          "Data Structure, Algorithms, Agile/Scrum, Performance Optimization, SEO",
       },
     ],
   },
@@ -118,7 +118,7 @@ export const EN: Translation = {
       title: "Sonicfi",
       year: "2025",
       description:
-        "Tech Stack: React, Zustand, Tailwind CSS, Node.js, Express.js, MongoDB, Docker, AWS",
+        "React, Zustand, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
       image: "/sonicfi-0.jpg",
       link: "/project/sonicfi",
     },
@@ -126,7 +126,7 @@ export const EN: Translation = {
       title: "Orbit",
       year: "2025",
       description:
-        "Tech Stack: React, Redux, Tailwind CSS, Node.js, Express.js, MongoDB, Docker, AWS",
+        "React, Redux, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
       image: "/orbit-0.jpg",
       link: "/project/orbit",
     },
@@ -134,7 +134,7 @@ export const EN: Translation = {
       title: "Portfolio",
       year: "2025",
       description:
-        "Tech Stack: Next.js, Zustand, i18n, Tailwind CSS, Vercel, Cloudflare R2",
+        "Next.js, Zustand, i18n, Tailwind CSS, Vercel, SEO, Cloudflare R2",
       image: "/portfolio-0.jpg",
       link: "/project/portfolio",
     },
@@ -142,7 +142,7 @@ export const EN: Translation = {
       title: "ReRender",
       year: "2024 - 2025",
       description:
-        "Tech Stack: Next.js, Redux, Socket.io, Redis, Node.js, MongoDB, AWS S3, AWS Lambda",
+        "Next.js, React, Redux, Socket.io, Redis, Node.js, MongoDB, Qdrant DB, AWS S3, AWS Lambda",
       image: "/rerender-0.jpg",
       link: "/project/rerender",
     },
@@ -150,7 +150,7 @@ export const EN: Translation = {
       title: "Tovier",
       year: "2024",
       description:
-        "Tech Stack: React, Context API, Tailwind CSS, Firebase, Vite, Vercel",
+        "React, Context API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",
       image: "/tovier-0.jpg",
       link: "/project/tovier",
     },
@@ -158,7 +158,7 @@ export const EN: Translation = {
       title: "Orbit v1",
       year: "2024",
       description:
-        "Tech Stack: React, Context API, Tailwind CSS, Firebase, Vite, Vercel",
+        "React, Context API, Gemini API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",
       image: "/orbit-v1-0.jpg",
       link: "/project/orbit-v1",
     },
@@ -166,7 +166,7 @@ export const EN: Translation = {
   footer: {
     title: "Let’s Build Something Great Together",
     intro:
-      "Hi, I'm Ting Wei\nFullstack engineer with AI & web development expertise\nI craft fast, elegant, and user-centric digital experiences",
+      "Fullstack engineer with real-world experience\ndelivering scalable, AI-driven web apps with intuitive UX",
     message: "Send a message",
     copyright: "Copyright © 2025 Ting Wei Fan. All Rights Reserved.",
   },
@@ -178,11 +178,13 @@ export const EN: Translation = {
     techStack: "Technology Stack",
     backend: "Backend Development",
     frontend: "Frontend Development",
+    fullstack: "Fullstack Web Development",
     devOps: "DevOps & CI/CD",
     uiux: "UI/UX Design",
     achievements: "Achievements",
     impact: "Impact",
     liveDemo: "Live Demo",
+    selectedWorks: "Selected Works",
   },
 };
 

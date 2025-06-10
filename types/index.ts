@@ -26,6 +26,7 @@ export type Translation = {
       title: string;
       company: string;
       date: string;
+      linkedin: string;
       description: string[];
     }[];
     education: {
@@ -59,11 +60,13 @@ export type Translation = {
     techStack: string;
     backend: string;
     frontend: string;
+    fullstack: string;
     devOps: string;
     uiux: string;
     achievements: string;
     impact: string;
     liveDemo: string;
+    selectedWorks: string;
   };
 };
 

@@ -23,8 +23,7 @@ export const ZH_TW: Translation = {
       name: "范庭維",
       title: "全端軟體工程師",
       intro: [
-        "具備豐富實戰經驗的全端開發者，擁有康乃爾大學學士學位，目前於喬治亞理工學院進修碩士，精通 TypeScript, Next.js、React、Node.js、Express 及 MongoDB，專長於設計與開發高效能以使用者為核心的網頁應用程式。作為工程開發核心並維運每日超過 10 萬活躍用戶的 AI 圖像生成平台，扮演全端關鍵角色，成功交付多項核心功能，有效支撐數百萬註冊用戶的穩定運行與快速成長。",
-        "擁有 AWS (S3, EC2, Lambda, CloudFront)、Docker、Jest 及自動化測試的實務經驗，能靈活應對雲端部署與持續整合挑戰。熟悉 Agile / Scrum 流程，擅長團隊溝通與快速交付，具備獨立開發與團隊協作的雙重能力。 熱衷於將革新技術與現代前後端架構結合，創造具影響力的數位產品。渴望在高速成長的團隊中發揮技術專業與創新思維，驅動產品價值最大化，成為企業數位轉型的關鍵推手。",
+        "具備豐富實戰經驗的全端開發者，專長於設計與打造高效能、以使用者為核心的 AI 網頁應用。於百萬用戶的 AI 設計渲染服務中擔任核心工程角色，維運每日逾十萬活躍用戶與數百萬註冊帳號，成功交付多項關鍵功能，支撐平台穩定成長。熟悉雲端部署、自動化測試與敏捷開發流程，擅長跨部門協作與溝通，熱衷結合創新技術與現代架構，驅動產品價值最大化。",
       ],
     },
     jobs: [
@@ -32,24 +31,28 @@ export const ZH_TW: Translation = {
         title: "軟體工程師",
         company: "麒發科技 Architech AI",
         date: "十月 2024 - 至今",
+        linkedin: "https://www.linkedin.com/company/architechtw",
         description: [
-          "參與開發具 AI 協作功能的 Miro 風格畫布，採用 React Flow 實作，並針對即時渲染與全螢幕互動進行最佳化。主導負責產品主題風格全面改版，透過 A/B 測試有效提升用戶註冊率 10%，並使整體 UI 更符合現代設計趨勢。我獨立開發並成功推出「虛擬擺設」與「圖片轉影片」功能，大幅提升渲染品質，並透過自動播放預覽與優化排版，強化 Pro 等級升級轉換率。同時，我也打造了企業級的團隊管理系統，支援基於角色的權限控管與 Stripe 集中計費，並導入多圖輸入機制，提升跨房間視角的一致性與渲染表現。",
+          "主導全產品 (ReRender & ReRoom) 主題重新設計，執行 A/B 測試，使註冊用戶增長超過 10%，並強化品牌與現代 UI 趨勢的一致性。利用 WebSocket 和 React Flow 打造類似 Miro 的 AI 版面功能，整合 AI 渲染控制，實現流暢的即時協作體驗，並優化選單系統以提升使用便利性",
         ],
       },
       {
         title: "初階建築師",
         company: "Robert A.M. Stern Architects",
         date: "四月 2022 - 八月 2024",
+        linkedin: "https://www.linkedin.com/company/ramsa",
         description: [
-          "將 Stable Diffusion 部署至本地伺服器，成功為公司節省六位數美金的 AI 授權支出。同時訓練專屬 LoRA 模型，並建立 3D 模型資產資料庫，供超過 200 位建築師使用，有效簡化設計流程並提升協作效率。",
+          "在私有伺服器上部署 Stable Diffusion，消除對第三方 AI 服務的依賴，為 200 多個建築師訂閱帳戶節省超過 10 萬美元的年度服務訂閱費用",
         ],
       },
       {
         title: "實習建築師",
         company: "九典聯合建築師事務所",
         date: "五月 2019 - 八月 2019",
+        linkedin:
+          "https://www.linkedin.com/company/bio-architecture-formosana-taiwan/posts",
         description: [
-          "參與設計榮獲全國設計獎的醫學中心，並協助多項都市更新案，負責撰寫符合法規的技術圖說與施工文件，確保專案順利通過審核。",
+          "主力負責成功大學老年醫院競圖視覺呈現表現，促成獲勝提案為事務所贏得該大型開發案",
         ],
       },
     ],
@@ -60,8 +63,8 @@ export const ZH_TW: Translation = {
         date: "一月 2025 - 至今",
       },
       {
-        school: "帝國州大學",
-        degree: "碩士預科 - 電腦科學",
+        school: "紐約州立帝國大學",
+        degree: "電腦科學碩士預修",
         date: "一月 2024 - 五月 2024",
       },
       {
@@ -73,39 +76,40 @@ export const ZH_TW: Translation = {
     techStacks: [
       {
         title: "語言",
-        skills: "TypeScript, Java, Python, JavaScript, C++",
+        skills: "TypeScript, JavaScript, Java, Python, C++",
       },
       {
         title: "前端",
-        skills: "Next.js, React, Redux, Zustand, Tailwind CSS",
+        skills: "Next.js, React, Redux, Zustand, Tailwind CSS, Sass, HTML, CSS",
       },
       {
         title: "後端",
-        skills: "Node.js, Express.js, Spring Boot",
-      },
-      {
-        title: "通訊",
-        skills: "RESTful APIs, WebSockets",
+        skills: "Spring Boot, Node.js, Express.js, RESTful APIs, WebSockets",
       },
       {
         title: "認證",
-        skills: "JWT, OAuth, Firebase Auth, Next Auth",
+        skills: "JWT, OAuth 2.0, Firebase Auth, NextAuth.js",
       },
       {
         title: "資料庫",
-        skills: "MongoDB, PostgreSQL, MySQL",
+        skills: "MongoDB, PostgreSQL, Redis",
       },
       {
-        title: "開發維運",
-        skills: "Git, Docker, AWS S3, AWS EC2, AWS Lambda",
+        title: "測試/打包",
+        skills: "Jest, Unit Testing, Vite, npm, yarn, ESLint",
       },
       {
-        title: "測試",
-        skills: "Jest, Unit Testing",
+        title: "版本控制/開發維運",
+        skills: "Git, GitHub, Linux, Shell Scripting, Nginx, Docker",
       },
       {
-        title: "概念",
-        skills: "Data Structures, Algorithms",
+        title: "雲端",
+        skills: "Cloudflare R2, AWS S3, AWS EC2, AWS Lambda, AWS CloudFront",
+      },
+      {
+        title: "其他",
+        skills:
+          "Data Structure, Algorithms, Agile/Scrum, Performance Optimization, SEO",
       },
     ],
   },
@@ -114,7 +118,7 @@ export const ZH_TW: Translation = {
       title: "Sonicfi",
       year: "2025",
       description:
-        "Tech Stack: React, Zustand, Tailwind CSS, Node.js, Express.js, MongoDB, Docker, AWS",
+        "React, Zustand, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
       image: "/sonicfi-0.jpg",
       link: "/project/sonicfi",
     },
@@ -122,7 +126,7 @@ export const ZH_TW: Translation = {
       title: "Orbit",
       year: "2025",
       description:
-        "Tech Stack: React, Redux, Tailwind CSS, Node.js, Express.js, MongoDB, Docker, AWS",
+        "React, Redux, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
       image: "/orbit-0.jpg",
       link: "/project/orbit",
     },
@@ -130,7 +134,7 @@ export const ZH_TW: Translation = {
       title: "Portfolio",
       year: "2025",
       description:
-        "Tech Stack: Next.js, Zustand, i18n, Tailwind CSS, Vercel, Cloudflare R2",
+        "Next.js, Zustand, i18n, Tailwind CSS, Vercel, SEO, Cloudflare R2",
       image: "/portfolio-0.jpg",
       link: "/project/portfolio",
     },
@@ -138,7 +142,7 @@ export const ZH_TW: Translation = {
       title: "ReRender",
       year: "2024 - 2025",
       description:
-        "Tech Stack: Next.js, Redux, Socket.io, Redis, Node.js, MongoDB, AWS S3, AWS Lambda",
+        "Next.js, React, Redux, Socket.io, Redis, Node.js, MongoDB, Qdrant DB, AWS S3, AWS Lambda",
       image: "/rerender-0.jpg",
       link: "/project/rerender",
     },
@@ -146,7 +150,7 @@ export const ZH_TW: Translation = {
       title: "Tovier",
       year: "2024",
       description:
-        "Tech Stack: React, Context API, Tailwind CSS, Firebase, Vite, Vercel",
+        "React, Context API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",
       image: "/tovier-0.jpg",
       link: "/project/tovier",
     },
@@ -154,7 +158,7 @@ export const ZH_TW: Translation = {
       title: "Orbit v1",
       year: "2024",
       description:
-        "Tech Stack: React, Context API, Tailwind CSS, Firebase, Vite, Vercel",
+        "React, Context API, Gemini API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",
       image: "/orbit-v1-0.jpg",
       link: "/project/orbit-v1",
     },
@@ -174,11 +178,13 @@ export const ZH_TW: Translation = {
     techStack: "技術應用",
     backend: "後端開發",
     frontend: "前端開發",
+    fullstack: "全端網頁開發",
     devOps: "開發維運",
     uiux: "UI/UX 設計",
     achievements: "成果",
     impact: "影響",
     liveDemo: "前往應用",
+    selectedWorks: "精選項目",
   },
 };
 

@@ -1,9 +1,3 @@
-export const LINKEDIN_URL: string[] = [
-  "https://www.linkedin.com/company/architechtw",
-  "https://www.linkedin.com/company/architechtw",
-  "https://www.linkedin.com/company/architechtw",
-];
-
 export type ProjectInfo = {
   year: number;
   name: string;

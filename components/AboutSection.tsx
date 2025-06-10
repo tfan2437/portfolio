@@ -6,8 +6,6 @@ import Link from "next/link";
 import type { Locale } from "@/types";
 import { twMerge } from "tailwind-merge";
 
-import { LINKEDIN_URL } from "@/constants";
-
 const AboutSection = () => {
   const { locale } = useI18nStore();
   const about = useTranslations().about;
@@ -21,7 +19,7 @@ const AboutSection = () => {
   return (
     <div
       id="about"
-      className="w-full flex flex-col items-center lg:pb-[160px] pb-[100px] pt-[100px]"
+      className="w-full flex flex-col items-center lg:pb-[120px] pb-[100px] pt-[100px]"
     >
       <div className="responsive flex flex-col lg:flex-row justify-between lg:gap-32">
         <div className="flex flex-col w-full px-4 md:px-8 lg:px-0 lg:w-1/2">
@@ -31,7 +29,7 @@ const AboutSection = () => {
             title={about.me.title}
             intro={about.me.intro}
           />
-          <div className="flex flex-col mt-16 gap-10">
+          <div className="flex flex-col mt-10 gap-8">
             {about.jobs.map((job, index) => (
               <Job
                 key={index}
@@ -40,7 +38,7 @@ const AboutSection = () => {
                 company={job.company}
                 date={job.date}
                 description={job.description}
-                href={LINKEDIN_URL[index]}
+                href={job.linkedin}
               />
             ))}
           </div>
@@ -126,7 +124,7 @@ const Job = ({
       <Link
         target="_blank"
         href={href}
-        className="absolute top-0 right-0 cursor-pointer p-1 "
+        className="absolute top-0 right-0 cursor-pointer p-1 hover:scale-110 transition-all duration-300"
       >
         <Image
           src="/icons/linkedin-black.png"
@@ -157,11 +155,13 @@ const Job = ({
       >
         {date}
       </span>
-      <ul className="mt-3 text-sm">
+      <div className="mt-2 text-sm flex flex-col gap-2">
         {description.map((desc, index) => (
-          <li key={index}>{desc}</li>
+          <p className="text-neutral-900" key={index}>
+            {desc}
+          </p>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
