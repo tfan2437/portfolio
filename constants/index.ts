@@ -89,14 +89,10 @@ export const PROJECTS_IMAGES: Record<string, string[]> = {
   orbit: ["/orbit-0.jpg", "/orbit-1.jpg", "/orbit-2.jpg"],
   "orbit-v1": ["/orbit-v1-0.jpg", "/orbit-v1-1.jpg", "/orbit-v1-2.jpg"],
   tovier: [
-    "https://r2.tfan2437.workers.dev/projects/tovier-0.webp",
+    "/tovier-0.jpg",
     "https://r2.tfan2437.workers.dev/projects/tovier-1.webp",
     "https://r2.tfan2437.workers.dev/projects/tovier-2.webp",
   ],
-  portfolio: [
-    "https://r2.tfan2437.workers.dev/projects/orbit-0.webp",
-    "https://r2.tfan2437.workers.dev/projects/orbit-1.webp",
-    "https://r2.tfan2437.workers.dev/projects/orbit-2.webp",
-  ],
+  portfolio: ["/portfolio-0.jpg", "/portfolio-1.jpg", "/portfolio-2.jpg"],
   rerender: ["/rerender-0.jpg", "/rerender-1.jpg", "/rerender-2.jpg"],
 };

@@ -112,37 +112,49 @@ export const ZH_TW: Translation = {
   projects: [
     {
       title: "Sonicfi",
-      description: "",
+      year: "2025",
+      description:
+        "Tech Stack: React, Zustand, Tailwind CSS, Node.js, Express.js, MongoDB, Docker, AWS",
       image: "/sonicfi-0.jpg",
       link: "/project/sonicfi",
     },
     {
       title: "Orbit",
-      description: "",
+      year: "2025",
+      description:
+        "Tech Stack: React, Redux, Tailwind CSS, Node.js, Express.js, MongoDB, Docker, AWS",
       image: "/orbit-0.jpg",
       link: "/project/orbit",
     },
     {
       title: "Portfolio",
-      description: "",
+      year: "2025",
+      description:
+        "Tech Stack: Next.js, Zustand, i18n, Tailwind CSS, Vercel, Cloudflare R2",
       image: "/portfolio-0.jpg",
       link: "/project/portfolio",
     },
     {
       title: "ReRender",
-      description: "",
+      year: "2024 - 2025",
+      description:
+        "Tech Stack: Next.js, Redux, Socket.io, Redis, Node.js, MongoDB, AWS S3, AWS Lambda",
       image: "/rerender-0.jpg",
       link: "/project/rerender",
     },
     {
       title: "Tovier",
-      description: "",
+      year: "2024",
+      description:
+        "Tech Stack: React, Context API, Tailwind CSS, Firebase, Vite, Vercel",
       image: "/tovier-0.jpg",
       link: "/project/tovier",
     },
     {
       title: "Orbit v1",
-      description: "",
+      year: "2024",
+      description:
+        "Tech Stack: React, Context API, Tailwind CSS, Firebase, Vite, Vercel",
       image: "/orbit-v1-0.jpg",
       link: "/project/orbit-v1",
     },

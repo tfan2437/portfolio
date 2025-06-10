@@ -40,6 +40,7 @@ export type Translation = {
   };
   projects: {
     title: string;
+    year: string;
     description: string;
     image: string;
     link: string;

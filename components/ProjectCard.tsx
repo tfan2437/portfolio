@@ -9,6 +9,7 @@ const ProjectCard = ({
 }: {
   project: {
     title: string;
+    year: string;
     description: string;
     image: string;
     link: string;
@@ -24,9 +25,10 @@ const ProjectCard = ({
         <Image
           src={project.image}
           alt={project.title}
-          width={1000}
-          height={1000}
+          width={1700}
+          height={1100}
           className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+          priority
           draggable={false}
         />
       </div>
@@ -37,10 +39,10 @@ const ProjectCard = ({
             <ArrowUpRightIcon className="size-4 text-black" />
           </div>
         </div>
-        <p className="text-sm text-neutral-500 font-light">2025</p>
+        <p className="text-sm text-neutral-600 font-light">{project.year}</p>
       </div>
-      <p className="text-sm text-neutral-500 mt-1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+      <p className="text-sm text-neutral-600 mt-1 line-clamp-1">
+        {project.description}
       </p>
     </div>
   );
