@@ -145,6 +145,9 @@ body {
   button {
     @apply cursor-pointer outline-none select-none;
   }
+  Button {
+    @apply cursor-pointer outline-none select-none;
+  }
   Link {
     @apply cursor-pointer outline-none select-none;
   }

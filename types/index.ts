@@ -10,10 +10,11 @@ export type Translation = {
     contactMe: string;
     resume: string;
   };
-  intro: {
+  hero: {
     name: string;
     occupation: string;
     greeting: string;
+    driveLink: string;
   };
   about: {
     me: {
@@ -37,16 +38,17 @@ export type Translation = {
       skills: string;
     }[];
   };
+  projects: {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+  }[];
   footer: {
     title: string;
     intro: string;
     message: string;
-    email: string;
     copyright: string;
-    projects: {
-      name: string;
-      href: string;
-    }[];
   };
   label: {
     type: string;

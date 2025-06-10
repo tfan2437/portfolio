@@ -10,11 +10,13 @@ export const EN: Translation = {
     contactMe: "Contact Me",
     resume: "Resume",
   },
-  intro: {
+  hero: {
     name: "Ting Wei Fan",
     occupation: "Software Engineer",
     greeting:
-      "Hey there! I'm Ting Wei. \nI build high-quality websites with \nmodern tech expertise.",
+      "Hey there! I am Ting Wei\nA fullstack engineer who turns ideas into scalable web apps\nBlending performance, design, and usability",
+    driveLink:
+      "https://drive.google.com/file/d/1zztIxa3wGbKI3FcqAulb7toyLO8Fo6_o/view?usp=sharing",
   },
   about: {
     me: {
@@ -111,34 +113,49 @@ export const EN: Translation = {
       },
     ],
   },
+  projects: [
+    {
+      title: "Sonicfi",
+      description: "",
+      image: "/sonicfi-0.jpg",
+      link: "/project/sonicfi",
+    },
+    {
+      title: "Orbit",
+      description: "",
+      image: "/orbit-0.jpg",
+      link: "/project/orbit",
+    },
+    {
+      title: "Portfolio",
+      description: "",
+      image: "/portfolio-0.jpg",
+      link: "/project/portfolio",
+    },
+    {
+      title: "ReRender",
+      description: "",
+      image: "/rerender-0.jpg",
+      link: "/project/rerender",
+    },
+    {
+      title: "Tovier",
+      description: "",
+      image: "/tovier-0.jpg",
+      link: "/project/tovier",
+    },
+    {
+      title: "Orbit v1",
+      description: "",
+      image: "/orbit-v1-0.jpg",
+      link: "/project/orbit-v1",
+    },
+  ],
   footer: {
     title: "Let’s Build Something Great Together",
     intro:
-      "Fullstack engineer with solid experience building \nscalable, user-focused web apps",
+      "Hi, I'm Ting Wei\nFullstack engineer with AI & web development expertise\nI craft fast, elegant, and user-centric digital experiences",
     message: "Send a message",
-    email: "tfan2437@gmail.com",
-    projects: [
-      {
-        name: "Orbit AI",
-        href: "https://orbit-ai-v2.vercel.app/",
-      },
-      {
-        name: "Sonicfi",
-        href: "https://sonicfi-ai.vercel.app/",
-      },
-      {
-        name: "Tovier",
-        href: "https://sonicfi-ai.vercel.app/",
-      },
-      {
-        name: "Orbit AI v1",
-        href: "https://orbit-ai-v2.vercel.app/",
-      },
-      {
-        name: "Sonicfi v1",
-        href: "https://sonicfi-ai.vercel.app/",
-      },
-    ],
     copyright: "Copyright © 2025 Ting Wei Fan. All Rights Reserved.",
   },
   label: {

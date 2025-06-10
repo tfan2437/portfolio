@@ -84,14 +84,6 @@ export const PROJECTS_INFO: ProjectInfo[] = [
   },
 ];
 
-export const PROJECT_CARDS: Record<string, string> = {
-  sonicfi: "/projects/sonicfi-1.jpg",
-  orbit: "/projects/orbit-3.jpg",
-  "orbit-v1": "/projects/orbit-3.jpg",
-  tovier: "/projects/orbit-3.jpg",
-  portfolio: "/projects/orbit-3.jpg",
-};
-
 export const PROJECTS_IMAGES: Record<string, string[]> = {
   sonicfi: ["/sonicfi-0.jpg", "/sonicfi-1.jpg", "/sonicfi-2.jpg"],
   orbit: ["/orbit-0.jpg", "/orbit-1.jpg", "/orbit-2.jpg"],

@@ -22,11 +22,11 @@ const FooterSection = () => {
   const platformLinks = [
     {
       image: "/icons/linkedin.png",
-      href: "https://www.linkedin.com/in/tingweifan/",
+      href: "https://www.linkedin.com/in/ting-wei-fan-496669aa",
     },
     {
       image: "/icons/github.png",
-      href: "https://github.com/tingweifan",
+      href: "https://github.com/tfan2437",
     },
     {
       image: "/icons/gmail.png",
@@ -34,10 +34,29 @@ const FooterSection = () => {
     },
   ];
 
+  const PROJECTS_LINK = [
+    {
+      title: "Orbit AI",
+      href: "https://www.orbits-ai.com",
+    },
+    {
+      title: "Sonicfi",
+      href: "https://www.sonic-fi.com",
+    },
+    {
+      title: "Tovier",
+      href: "https://tovier-trailer.vercel.app",
+    },
+    {
+      title: "Orbit v1",
+      href: "https://orbit-ai-chatbot.vercel.app",
+    },
+  ];
+
   return (
     <footer
       id="contact"
-      className="w-full flex flex-col items-center bg-black pt-20 pb-6"
+      className="w-full flex flex-col items-center bg-black pt-20 pb-6 select-none"
     >
       <div className="responsive flex flex-col lg:justify-between items-center h-auto lg:h-[338px]">
         <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center">
@@ -51,8 +70,8 @@ const FooterSection = () => {
             <div className="w-full flex flex-col">
               <p className="text-sm text-neutral-500">{footer.message}</p>
               <div className="flex flex-row gap-1 items-center">
-                <p className="text-base text-white font-semibold">
-                  {footer.email}
+                <p className="text-base text-white font-semibold select-all">
+                  tfan2437@gmail.com
                 </p>
                 <button
                   onClick={handleCopy}
@@ -69,10 +88,10 @@ const FooterSection = () => {
             </div>
           </div>
           <div className="w-[180px] flex flex-col gap-2 items-start lg:items-end h-full py-10 lg:pt-12">
-            {footer.projects.map((project, index) => (
+            {PROJECTS_LINK.map((project, index) => (
               <ProjectLink
                 key={index}
-                title={project.name}
+                title={project.title}
                 href={project.href}
               />
             ))}

@@ -24,7 +24,10 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed top-0 left-0 z-30 flex justify-center bg-white ">
       <div className="responsive flex justify-between items-center w-full py-3 relative">
-        <Link href="/" className="flex items-center gap-2 w-auto md:w-60">
+        <Link
+          href="/"
+          className="flex items-center gap-2 w-auto md:w-60 select-none"
+        >
           <Image
             src="/metadata/avator.webp"
             alt="logo"
@@ -36,7 +39,7 @@ const Navbar = () => {
           />
           <div className="flex flex-col">
             <span className="text-[18px] font-semibold font-inter">
-              {wording.intro.name}
+              {wording.hero.name}
             </span>
             <span
               className={twMerge(
@@ -44,7 +47,7 @@ const Navbar = () => {
                 locale === "en" && "font-light"
               )}
             >
-              {wording.intro.occupation}
+              {wording.hero.occupation}
             </span>
           </div>
         </Link>
@@ -72,7 +75,7 @@ const Navbar = () => {
           <Link
             href={"mailto:tfan2437@gmail.com"}
             target="_blank"
-            className="bg-black group text-white pl-4 pr-6 py-1.5 rounded-full cursor-pointer flex items-center gap-2 hover:bg-green hover:text-black border-2 border-black transition-colors duration-300"
+            className="bg-black group text-white pl-4 pr-6 py-1.5 rounded-full cursor-pointer flex items-center gap-2 hover:bg-green hover:text-black border-2 border-black transition-colors duration-300 select-none"
           >
             <Image
               src="/icons/waving-hand.png"

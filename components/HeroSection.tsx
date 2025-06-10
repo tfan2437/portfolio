@@ -18,8 +18,8 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeIn", delay: 0.2 }}
       >
-        <p className="text-4xl font-semibold leading-12 whitespace-pre-line">
-          {wording.intro.greeting}
+        <p className="text-4xl font-semibold leading-12 whitespace-pre-line select-none">
+          {wording.hero.greeting}
         </p>
       </motion.div>
 
@@ -34,12 +34,7 @@ const HeroSection = () => {
             <span className="font-semibold">{wording.nav.contactMe}</span>
           </button>
         </Link>
-        <Link
-          href={
-            "https://drive.google.com/file/d/1n9QQK_M0fy6nKjCSRvyHGkV32jCkQSam/view"
-          }
-          target="_blank"
-        >
+        <Link href={wording.hero.driveLink} target="_blank">
           <button
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}

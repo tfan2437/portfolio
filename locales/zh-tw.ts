@@ -10,11 +10,13 @@ export const ZH_TW: Translation = {
     contactMe: "聯絡我",
     resume: "履歷",
   },
-  intro: {
+  hero: {
     name: "范庭維",
     occupation: "軟體工程師",
     greeting:
-      "嗨！我是庭維\n一名軟體工程師，專精全端網頁技術\n打造高效美觀的數位體驗",
+      "嗨，我是庭維\n擅長全端開發與 AI 技術的軟體工程師\n幫助產品實現快速上線與優異的使用者體驗",
+    driveLink:
+      "https://drive.google.com/file/d/1zztIxa3wGbKI3FcqAulb7toyLO8Fo6_o/view?usp=sharing",
   },
   about: {
     me: {
@@ -107,34 +109,49 @@ export const ZH_TW: Translation = {
       },
     ],
   },
+  projects: [
+    {
+      title: "Sonicfi",
+      description: "",
+      image: "/sonicfi-0.jpg",
+      link: "/project/sonicfi",
+    },
+    {
+      title: "Orbit",
+      description: "",
+      image: "/orbit-0.jpg",
+      link: "/project/orbit",
+    },
+    {
+      title: "Portfolio",
+      description: "",
+      image: "/portfolio-0.jpg",
+      link: "/project/portfolio",
+    },
+    {
+      title: "ReRender",
+      description: "",
+      image: "/rerender-0.jpg",
+      link: "/project/rerender",
+    },
+    {
+      title: "Tovier",
+      description: "",
+      image: "/tovier-0.jpg",
+      link: "/project/tovier",
+    },
+    {
+      title: "Orbit v1",
+      description: "",
+      image: "/orbit-v1-0.jpg",
+      link: "/project/orbit-v1",
+    },
+  ],
   footer: {
     title: "讓我們一起打造下一世代的產品",
     intro:
       "具備扎實開發AI應用經驗的全端工程師\n專注於打造高效可擴展且以使用者為核心的網頁應用",
     message: "傳送訊息",
-    email: "tfan2437@gmail.com",
-    projects: [
-      {
-        name: "Orbit AI",
-        href: "https://orbit-ai-v2.vercel.app/",
-      },
-      {
-        name: "Sonicfi",
-        href: "https://sonicfi-ai.vercel.app/",
-      },
-      {
-        name: "Tovier",
-        href: "https://sonicfi-ai.vercel.app/",
-      },
-      {
-        name: "Orbit AI v1",
-        href: "https://orbit-ai-v2.vercel.app/",
-      },
-      {
-        name: "Sonicfi v1",
-        href: "https://sonicfi-ai.vercel.app/",
-      },
-    ],
     copyright: "版權所有 © 2025 Ting Wei Fan 保留所有權利",
   },
   label: {
