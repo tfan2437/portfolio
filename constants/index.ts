@@ -91,7 +91,11 @@ export const PROJECTS_IMAGES: Record<string, string[]> = {
     "https://r2.tfan2437.workers.dev/projects/sonicfi-1.webp",
     "https://r2.tfan2437.workers.dev/projects/sonicfi-2.webp",
   ],
-  orbit: ["/orbit-0.jpg", "/orbit-1.jpg", "/orbit-2.jpg"],
+  orbit: [
+    "https://r2.tfan2437.workers.dev/projects/orbit-0.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-1.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-2.webp",
+  ],
   "orbit-v1": [
     "https://r2.tfan2437.workers.dev/projects/orbit-v1-0.webp",
     "https://r2.tfan2437.workers.dev/projects/orbit-v1-1.webp",
@@ -128,7 +132,7 @@ export const PROJECTS_CARDS: ProjectCard[] = [
     year: "2025",
     description:
       "React, Redux, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
-    image: "/orbit-0.jpg",
+    image: "https://r2.tfan2437.workers.dev/projects/orbit-0.webp",
     link: "/project/orbit",
   },
   {
