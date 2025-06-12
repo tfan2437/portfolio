@@ -16,7 +16,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeIn", delay: 0.2 }}
+        transition={{ duration: 1, ease: "easeIn", delay: 0.1 }}
       >
         <p className="text-4xl font-semibold leading-12 whitespace-pre-line select-none">
           {wording.hero.greeting}
@@ -44,7 +44,7 @@ const HeroSection = () => {
 
             <div className={twMerge(isHovering && "animate-wave")}>
               <Image
-                src="/icons/resume.png"
+                src="/icons/emoji-resume.png"
                 alt="resume"
                 width={16}
                 height={16}

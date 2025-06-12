@@ -3,10 +3,10 @@
 import { useRouter } from "next/navigation";
 import { motion } from "motion/react";
 import { useState } from "react";
-import type { ProjectInfo } from "@/constants";
-import { PROJECTS_INFO } from "@/constants";
-import Image from "next/image";
+import type { ProjectItem } from "@/constants";
+import { PROJECTS_LIST } from "@/constants";
 import { useTranslations } from "@/lib/store/useGlobal";
+import Image from "next/image";
 
 const ProjectsDisplay = () => {
   const { label } = useTranslations();
@@ -25,7 +25,7 @@ const ProjectsDisplay = () => {
           </div>
         </div>
         <div className="w-full flex flex-col select-none">
-          {PROJECTS_INFO.map((project, index) => (
+          {PROJECTS_LIST.map((project, index) => (
             <ProjectItem key={index} project={project} />
           ))}
         </div>
@@ -35,7 +35,7 @@ const ProjectsDisplay = () => {
 };
 export default ProjectsDisplay;
 
-const ProjectItem = ({ project }: { project: ProjectInfo }) => {
+const ProjectItem = ({ project }: { project: ProjectItem }) => {
   const router = useRouter();
   const [isHovering, setIsHovering] = useState(false);
   return (
@@ -73,7 +73,7 @@ const AnimatedSquares = ({ previews }: { previews: string[] }) => {
         {squares.map((square, index) => (
           <motion.div
             key={index}
-            className="w-40 h-40 bg-transparent shadow-2xl rounded-lg"
+            className="w-40 h-40 bg-black shadow-2xl rounded-lg"
             initial={{
               y: 150,
               opacity: 0,
@@ -112,13 +112,12 @@ const AnimatedSquares = ({ previews }: { previews: string[] }) => {
           >
             <Image
               src={previews[index]}
-              alt="preview"
+              alt={"preview"}
               width={160}
               height={160}
-              className="rounded-lg w-full h-full object-cover"
-              quality={85}
-              draggable={false}
-              priority
+              priority={false}
+              quality={80}
+              className="w-full h-full rounded-lg"
             />
           </motion.div>
         ))}

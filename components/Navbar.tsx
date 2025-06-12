@@ -78,7 +78,7 @@ const Navbar = () => {
             className="bg-black group text-white pl-4 pr-6 py-1.5 rounded-full cursor-pointer flex items-center gap-2 hover:bg-green hover:text-black border-2 border-black transition-colors duration-300 select-none"
           >
             <Image
-              src="/icons/waving-hand.png"
+              src="/icons/emoji-wavinghand.png"
               alt="waving-hand"
               width={20}
               height={20}

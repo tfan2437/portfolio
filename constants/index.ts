@@ -1,4 +1,4 @@
-export type ProjectInfo = {
+export type ProjectItem = {
   year: number;
   name: string;
   href: string;
@@ -9,16 +9,16 @@ export type ProjectInfo = {
 const PREVIEW_PREFIX: string =
   "https://r2.tfan2437.workers.dev/projects/preview-";
 
-export const PROJECTS_INFO: ProjectInfo[] = [
+export const PROJECTS_LIST: ProjectItem[] = [
   {
     year: 2025,
     name: "Sonicfi",
     href: "sonic-fi.com",
     link: "/project/sonicfi",
     previews: [
-      `${PREVIEW_PREFIX}orbit-0.webp`,
-      `${PREVIEW_PREFIX}orbit-1.webp`,
-      `${PREVIEW_PREFIX}orbit-2.webp`,
+      "https://r2.tfan2437.workers.dev/projects/preview-sonicfi-0.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-sonicfi-1.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-sonicfi-2.webp",
     ],
   },
   {
@@ -79,7 +79,11 @@ export const PROJECTS_INFO: ProjectInfo[] = [
 ];
 
 export const PROJECTS_IMAGES: Record<string, string[]> = {
-  sonicfi: ["/sonicfi-0.jpg", "/sonicfi-1.jpg", "/sonicfi-2.jpg"],
+  sonicfi: [
+    "https://r2.tfan2437.workers.dev/projects/sonicfi-0.webp",
+    "https://r2.tfan2437.workers.dev/projects/sonicfi-1.webp",
+    "https://r2.tfan2437.workers.dev/projects/sonicfi-2.webp",
+  ],
   orbit: ["/orbit-0.jpg", "/orbit-1.jpg", "/orbit-2.jpg"],
   "orbit-v1": ["/orbit-v1-0.jpg", "/orbit-v1-1.jpg", "/orbit-v1-2.jpg"],
   tovier: [

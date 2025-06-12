@@ -5,15 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/types";
 import { twMerge } from "tailwind-merge";
+import LinkedinIcon from "@/components/icons/LinkedinIcon";
 
 const AboutSection = () => {
   const { locale } = useI18nStore();
   const about = useTranslations().about;
 
-  const schoolImages = [
-    "/icons/gatech.png",
-    "/icons/empire-state.png",
-    "/icons/cornell.png",
+  const SCHOOLS = [
+    "/icons/black-gatech.png",
+    "/icons/black-empire.png",
+    "/icons/black-cornell.png",
   ];
 
   return (
@@ -54,7 +55,7 @@ const AboutSection = () => {
                 school={edu.school}
                 degree={edu.degree}
                 date={edu.date}
-                image={schoolImages[index]}
+                image={SCHOOLS[index]}
               />
             ))}
           </div>
@@ -126,13 +127,7 @@ const Job = ({
         href={href}
         className="absolute top-0 right-0 cursor-pointer p-1 hover:scale-110 transition-all duration-300"
       >
-        <Image
-          src="/icons/linkedin-black.png"
-          alt="linkedin"
-          width={16}
-          height={16}
-          className="size-5"
-        />
+        <LinkedinIcon />
       </Link>
       <h2
         className={twMerge("text-base", isEn ? "font-medium" : "font-semibold")}
@@ -187,7 +182,9 @@ const Education = ({
       )}
     >
       <div className="flex flex-row items-center gap-1.5">
-        <Image src={image} alt="school" width={16} height={16} />
+        <div className="w-4 h-4">
+          <Image src={image} alt="school" width={32} height={32} />
+        </div>
         <h2
           className={twMerge(
             "text-base",

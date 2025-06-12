@@ -440,7 +440,10 @@ export const PROJECTS_ZHTW: Record<string, Project> = {
       {
         type: "image",
         name: "UI/UX 設計",
-        images: ["/sonicfi-3.jpg", "/sonicfi-4.jpg"],
+        images: [
+          "https://r2.tfan2437.workers.dev/projects/sonicfi-3.webp",
+          "https://r2.tfan2437.workers.dev/projects/sonicfi-4.webp",
+        ],
         paragraphs: [],
         details: [
           {

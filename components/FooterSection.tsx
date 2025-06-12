@@ -2,10 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { CopyIcon, CheckIcon } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "@/lib/store/useGlobal";
-import { Link as LinkIcon } from "lucide-react";
+import { CopyIcon, CheckIcon, Link as LinkIcon } from "lucide-react";
 
 const FooterSection = () => {
   const [isCopied, setIsCopied] = useState(false);
@@ -21,15 +20,15 @@ const FooterSection = () => {
 
   const platformLinks = [
     {
-      image: "/icons/linkedin.png",
+      image: "/icons/footer-linkedin.svg",
       href: "https://www.linkedin.com/in/ting-wei-fan-496669aa",
     },
     {
-      image: "/icons/github.png",
+      image: "/icons/footer-github.svg",
       href: "https://github.com/tfan2437",
     },
     {
-      image: "/icons/gmail.png",
+      image: "/icons/footer-gmail.svg",
       href: "mailto:tfan2437@gmail.com",
     },
   ];
