@@ -8,6 +8,7 @@ export type ProjectItem = {
 
 export type ProjectCard = {
   title: string;
+  name: string;
   year: string;
   description: string;
   image: string;
@@ -121,6 +122,7 @@ export const PROJECTS_IMAGES: Record<string, string[]> = {
 export const PROJECTS_CARDS: ProjectCard[] = [
   {
     title: "Sonicfi Music",
+    name: "sonicfi",
     year: "2025",
     description:
       "React, Zustand, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
@@ -129,6 +131,7 @@ export const PROJECTS_CARDS: ProjectCard[] = [
   },
   {
     title: "Orbit AI",
+    name: "orbit",
     year: "2025",
     description:
       "React, Redux, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
@@ -137,6 +140,7 @@ export const PROJECTS_CARDS: ProjectCard[] = [
   },
   {
     title: "Portfolio Website",
+    name: "portfolio",
     year: "2025",
     description:
       "Next.js, Zustand, i18n, Tailwind CSS, Vercel, SEO, Cloudflare R2",
@@ -145,6 +149,7 @@ export const PROJECTS_CARDS: ProjectCard[] = [
   },
   {
     title: "ReRender AI",
+    name: "rerender",
     year: "2024 - 2025",
     description:
       "Next.js, React, Redux, Socket.io, Redis, Node.js, MongoDB, Qdrant DB, AWS S3, AWS Lambda",
@@ -153,6 +158,7 @@ export const PROJECTS_CARDS: ProjectCard[] = [
   },
   {
     title: "Tovier Trailer",
+    name: "tovier",
     year: "2024",
     description:
       "React, Context API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",
@@ -161,6 +167,7 @@ export const PROJECTS_CARDS: ProjectCard[] = [
   },
   {
     title: "Orbit AI - v1",
+    name: "orbit-v1",
     year: "2024",
     description:
       "React, Context API, Gemini API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",

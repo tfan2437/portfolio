@@ -11,7 +11,7 @@ const AnimationSeperator = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeIn", delay: 0.1 }}
+      transition={{ duration: 1, ease: "easeIn" }}
       className="w-full flex flex-col"
     >
       <div className="w-full h-64 md:h-[400px] border-t-4 border-black bg-black relative select-none">

@@ -1,4 +1,5 @@
 "use client";
+
 import { useTranslations } from "@/lib/store/useGlobal";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -16,7 +17,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeIn", delay: 0.1 }}
+        transition={{ duration: 1, ease: "easeIn" }}
       >
         <p className="text-4xl font-semibold leading-12 whitespace-pre-line select-none">
           {wording.hero.greeting}
@@ -26,7 +27,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
         className="flex flex-row gap-4"
       >
         <Link href={"mailto:tfan2437@gmail.com"} target="_blank">

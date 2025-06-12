@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { ArrowUpRightIcon } from "lucide-react";
+import Link from "next/link";
 
 const ProjectCard = ({
   project,
@@ -15,10 +15,9 @@ const ProjectCard = ({
     link: string;
   };
 }) => {
-  const router = useRouter();
   return (
-    <div
-      onClick={() => router.push(project.link)}
+    <Link
+      href={project.link}
       className="w-full flex flex-col cursor-pointer group"
     >
       <div className="w-full aspect-5/3 overflow-hidden rounded-lg bg-black">
@@ -44,7 +43,8 @@ const ProjectCard = ({
       <p className="text-sm text-neutral-600 mt-1 line-clamp-1">
         {project.description}
       </p>
-    </div>
+    </Link>
   );
 };
+
 export default ProjectCard;

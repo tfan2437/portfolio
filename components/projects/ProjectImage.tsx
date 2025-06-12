@@ -36,25 +36,27 @@ const ProjectImage = ({ name }: { name: string }) => {
         <div className="w-full sm:w-1/3 flex flex-col gap-2">
           <div className="w-full aspect-5/3 overflow-hidden rounded-lg bg-black">
             <Image
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               src={images[1]}
               alt={"Project Preview"}
               width={430}
               height={278}
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               draggable={false}
               quality={85}
+              priority={false}
             />
           </div>
 
           <div className="w-full aspect-5/3 overflow-hidden rounded-lg hidden sm:block bg-black">
             <Image
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               src={images[2]}
               alt={"Project Preview"}
               width={430}
               height={278}
               draggable={false}
               quality={85}
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              priority={false}
             />
           </div>
         </div>
