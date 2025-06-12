@@ -38,6 +38,14 @@ export default ProjectsDisplay;
 const ProjectItem = ({ project }: { project: ProjectItem }) => {
   const router = useRouter();
   const [isHovering, setIsHovering] = useState(false);
+
+  const color =
+    project.name === "Orbit v1" ||
+    project.name === "ReRender" ||
+    project.name === "Portfolio"
+      ? "white"
+      : "black";
+
   return (
     <div
       onClick={() => router.push(project.link)}
@@ -53,7 +61,7 @@ const ProjectItem = ({ project }: { project: ProjectItem }) => {
         <div className="h-[160px] w-px" />
 
         {isHovering ? (
-          <AnimatedSquares previews={project.previews} />
+          <AnimatedSquares color={color} previews={project.previews} />
         ) : (
           <div className="h-[160px] w-auto flex items-center text-black font-medium whitespace-nowrap">
             {project.href}
@@ -64,7 +72,13 @@ const ProjectItem = ({ project }: { project: ProjectItem }) => {
   );
 };
 
-const AnimatedSquares = ({ previews }: { previews: string[] }) => {
+const AnimatedSquares = ({
+  color,
+  previews,
+}: {
+  color: string;
+  previews: string[];
+}) => {
   const squares = [{ delay: 0 }, { delay: 0.15 }, { delay: 0.3 }];
 
   return (
@@ -73,7 +87,10 @@ const AnimatedSquares = ({ previews }: { previews: string[] }) => {
         {squares.map((square, index) => (
           <motion.div
             key={index}
-            className="w-40 h-40 bg-black shadow-2xl rounded-lg"
+            className="w-40 h-40 shadow-2xl rounded-lg"
+            style={{
+              backgroundColor: color,
+            }}
             initial={{
               y: 150,
               opacity: 0,

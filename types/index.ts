@@ -39,13 +39,6 @@ export type Translation = {
       skills: string;
     }[];
   };
-  projects: {
-    title: string;
-    year: string;
-    description: string;
-    image: string;
-    link: string;
-  }[];
   footer: {
     title: string;
     intro: string;

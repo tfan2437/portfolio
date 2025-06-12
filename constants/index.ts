@@ -6,8 +6,13 @@ export type ProjectItem = {
   previews: string[];
 };
 
-const PREVIEW_PREFIX: string =
-  "https://r2.tfan2437.workers.dev/projects/preview-";
+export type ProjectCard = {
+  title: string;
+  year: string;
+  description: string;
+  image: string;
+  link: string;
+};
 
 export const PROJECTS_LIST: ProjectItem[] = [
   {
@@ -27,31 +32,33 @@ export const PROJECTS_LIST: ProjectItem[] = [
     href: "orbits-ai.com",
     link: "/project/orbit",
     previews: [
-      `${PREVIEW_PREFIX}orbit-0.webp`,
-      `${PREVIEW_PREFIX}orbit-1.webp`,
-      `${PREVIEW_PREFIX}orbit-2.webp`,
+      "https://r2.tfan2437.workers.dev/projects/preview-orbit-0.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-orbit-1.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-orbit-2.webp",
     ],
   },
+  // todo
   {
     year: 2025,
     name: "Portfolio",
     href: "tingweifan.com",
     link: "/project/portfolio",
     previews: [
-      `${PREVIEW_PREFIX}orbit-0.webp`,
-      `${PREVIEW_PREFIX}orbit-1.webp`,
-      `${PREVIEW_PREFIX}orbit-2.webp`,
+      "https://r2.tfan2437.workers.dev/projects/preview-portfolio-0.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-portfolio-1.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-portfolio-2.webp",
     ],
   },
+  // todo
   {
     year: 2024,
     name: "ReRender",
     href: "rerenderai.com",
     link: "/project/rerender",
     previews: [
-      `${PREVIEW_PREFIX}rerender-0.webp`,
-      `${PREVIEW_PREFIX}rerender-1.webp`,
-      `${PREVIEW_PREFIX}rerender-2.webp`,
+      "https://r2.tfan2437.workers.dev/projects/preview-rerender-0.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-rerender-1.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-rerender-2.webp",
     ],
   },
   {
@@ -60,9 +67,9 @@ export const PROJECTS_LIST: ProjectItem[] = [
     href: "tovier-trailer.vercel.app",
     link: "/project/tovier",
     previews: [
-      `${PREVIEW_PREFIX}tovier-0.webp`,
-      `${PREVIEW_PREFIX}tovier-1.webp`,
-      `${PREVIEW_PREFIX}tovier-2.webp`,
+      "https://r2.tfan2437.workers.dev/projects/preview-tovier-0.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-tovier-1.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-tovier-2.webp",
     ],
   },
   {
@@ -71,9 +78,9 @@ export const PROJECTS_LIST: ProjectItem[] = [
     href: "orbit-ai-chatbot.vercel.app",
     link: "/project/orbit-v1",
     previews: [
-      `${PREVIEW_PREFIX}orbit-v1-0.webp`,
-      `${PREVIEW_PREFIX}orbit-v1-1.webp`,
-      `${PREVIEW_PREFIX}orbit-v1-2.webp`,
+      "https://r2.tfan2437.workers.dev/projects/preview-orbit-v1-0.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-orbit-v1-1.webp",
+      "https://r2.tfan2437.workers.dev/projects/preview-orbit-v1-2.webp",
     ],
   },
 ];
@@ -85,12 +92,75 @@ export const PROJECTS_IMAGES: Record<string, string[]> = {
     "https://r2.tfan2437.workers.dev/projects/sonicfi-2.webp",
   ],
   orbit: ["/orbit-0.jpg", "/orbit-1.jpg", "/orbit-2.jpg"],
-  "orbit-v1": ["/orbit-v1-0.jpg", "/orbit-v1-1.jpg", "/orbit-v1-2.jpg"],
+  "orbit-v1": [
+    "https://r2.tfan2437.workers.dev/projects/orbit-v1-0.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-v1-1.webp",
+    "https://r2.tfan2437.workers.dev/projects/orbit-v1-2.webp",
+  ],
   tovier: [
-    "/tovier-0.jpg",
+    "https://r2.tfan2437.workers.dev/projects/tovier-0.webp",
     "https://r2.tfan2437.workers.dev/projects/tovier-1.webp",
     "https://r2.tfan2437.workers.dev/projects/tovier-2.webp",
   ],
-  portfolio: ["/portfolio-0.jpg", "/portfolio-1.jpg", "/portfolio-2.jpg"],
-  rerender: ["/rerender-0.jpg", "/rerender-1.jpg", "/rerender-2.jpg"],
+  portfolio: [
+    "https://r2.tfan2437.workers.dev/projects/portfolio-0.webp",
+    "https://r2.tfan2437.workers.dev/projects/portfolio-1.webp",
+    "https://r2.tfan2437.workers.dev/projects/portfolio-2.webp",
+  ],
+  rerender: [
+    "https://r2.tfan2437.workers.dev/products/rerender-0.webp",
+    "https://r2.tfan2437.workers.dev/products/rerender-1.webp",
+    "https://r2.tfan2437.workers.dev/products/rerender-2.webp",
+  ],
 };
+
+export const PROJECTS_CARDS: ProjectCard[] = [
+  {
+    title: "Sonicfi Music",
+    year: "2025",
+    description:
+      "React, Zustand, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
+    image: "https://r2.tfan2437.workers.dev/projects/sonicfi-0.webp",
+    link: "/project/sonicfi",
+  },
+  {
+    title: "Orbit AI",
+    year: "2025",
+    description:
+      "React, Redux, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
+    image: "/orbit-0.jpg",
+    link: "/project/orbit",
+  },
+  {
+    title: "Portfolio Website",
+    year: "2025",
+    description:
+      "Next.js, Zustand, i18n, Tailwind CSS, Vercel, SEO, Cloudflare R2",
+    image: "https://r2.tfan2437.workers.dev/projects/portfolio-0.webp",
+    link: "/project/portfolio",
+  },
+  {
+    title: "ReRender AI",
+    year: "2024 - 2025",
+    description:
+      "Next.js, React, Redux, Socket.io, Redis, Node.js, MongoDB, Qdrant DB, AWS S3, AWS Lambda",
+    image: "https://r2.tfan2437.workers.dev/products/rerender-0.webp",
+    link: "/project/rerender",
+  },
+  {
+    title: "Tovier Trailer",
+    year: "2024",
+    description:
+      "React, Context API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",
+    image: "https://r2.tfan2437.workers.dev/projects/tovier-0.webp",
+    link: "/project/tovier",
+  },
+  {
+    title: "Orbit AI - v1",
+    year: "2024",
+    description:
+      "React, Context API, Gemini API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",
+    image: "https://r2.tfan2437.workers.dev/projects/orbit-v1-0.webp",
+    link: "/project/orbit-v1",
+  },
+];

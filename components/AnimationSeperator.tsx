@@ -3,7 +3,7 @@
 import { InfiniteProjectCards } from "./InfiniteProjectCards";
 import { motion } from "motion/react";
 import Link from "next/link";
-import OptimizedImage from "@/components/OptimizedImage";
+import Image from "next/image";
 import YoutubeIcon from "./icons/YoutubeIcon";
 
 const AnimationSeperator = () => {
@@ -29,14 +29,15 @@ const AnimationSeperator = () => {
             </Link>
           </div>
         </div>
-        <OptimizedImage
-          src="/projects/mining-house.webp"
+        <Image
+          src="/mining-house.webp"
+          className="w-full h-full object-cover"
           alt="Mining House"
-          width={3840}
-          height={1258}
+          width={1920}
+          height={629}
           priority={true}
-          quality={75}
-          className="w-full h-full"
+          quality={90}
+          draggable={false}
         />
       </div>
       <InfiniteProjectCards />

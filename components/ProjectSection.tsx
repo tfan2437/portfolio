@@ -4,9 +4,10 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import ProjectCard from "./ProjectCard";
 import { useTranslations } from "@/lib/store/useGlobal";
+import { PROJECTS_CARDS } from "@/constants";
 
 const ProjectSection = () => {
-  const { projects, label } = useTranslations();
+  const label = useTranslations().label;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
 
@@ -29,7 +30,7 @@ const ProjectSection = () => {
           ref={ref}
           className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-x-6 lg:gap-y-8 select-none"
         >
-          {projects.map((project, index) => (
+          {PROJECTS_CARDS.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}

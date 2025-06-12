@@ -24,13 +24,12 @@ const ProjectCard = ({
       <div className="w-full aspect-5/3 overflow-hidden rounded-lg bg-black">
         <Image
           src={project.image}
-          alt={project.title}
-          width={1250}
-          height={810}
+          alt={"Preview Card"}
+          width={628}
+          height={407}
           className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
           draggable={false}
           quality={85}
-          priority
         />
       </div>
       <div className="w-full flex items-center justify-between mt-3">

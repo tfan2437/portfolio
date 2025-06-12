@@ -113,56 +113,6 @@ export const EN: Translation = {
       },
     ],
   },
-  projects: [
-    {
-      title: "Sonicfi",
-      year: "2025",
-      description:
-        "React, Zustand, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
-      image: "/sonicfi-0.jpg",
-      link: "/project/sonicfi",
-    },
-    {
-      title: "Orbit",
-      year: "2025",
-      description:
-        "React, Redux, TypeScript, Node.js, Express.js, MongoDB, Docker, AWS S3, AWS EC2",
-      image: "/orbit-0.jpg",
-      link: "/project/orbit",
-    },
-    {
-      title: "Portfolio",
-      year: "2025",
-      description:
-        "Next.js, Zustand, i18n, Tailwind CSS, Vercel, SEO, Cloudflare R2",
-      image: "/portfolio-0.jpg",
-      link: "/project/portfolio",
-    },
-    {
-      title: "ReRender",
-      year: "2024 - 2025",
-      description:
-        "Next.js, React, Redux, Socket.io, Redis, Node.js, MongoDB, Qdrant DB, AWS S3, AWS Lambda",
-      image: "/rerender-0.jpg",
-      link: "/project/rerender",
-    },
-    {
-      title: "Tovier",
-      year: "2024",
-      description:
-        "React, Context API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",
-      image: "/tovier-0.jpg",
-      link: "/project/tovier",
-    },
-    {
-      title: "Orbit v1",
-      year: "2024",
-      description:
-        "React, Context API, Gemini API, Tailwind CSS, Firebase Auth, Firebase Database, Vite, Vercel",
-      image: "/orbit-v1-0.jpg",
-      link: "/project/orbit-v1",
-    },
-  ],
   footer: {
     title: "Let’s Build Something Great Together",
     intro:
@@ -620,10 +570,10 @@ export const PROJECTS_EN: Record<string, Project> = {
         type: "image",
         name: "UI/UX Design",
         images: [
-          "/orbit-3.jpg",
-          "/orbit-4.jpg",
-          "/orbit-5.jpg",
-          "/orbit-6.jpg",
+          "https://r2.tfan2437.workers.dev/projects/orbit-3.webp",
+          "https://r2.tfan2437.workers.dev/projects/orbit-4.webp",
+          "https://r2.tfan2437.workers.dev/projects/orbit-5.webp",
+          "https://r2.tfan2437.workers.dev/projects/orbit-6.webp",
         ],
         paragraphs: [],
         details: [
@@ -767,7 +717,11 @@ export const PROJECTS_EN: Record<string, Project> = {
       {
         type: "image",
         name: "UI/UX Design",
-        images: ["/orbit-v1-5.jpg", "/orbit-v1-4.jpg", "/orbit-v1-3.jpg"],
+        images: [
+          "https://r2.tfan2437.workers.dev/projects/orbit-v1-3.webp",
+          "https://r2.tfan2437.workers.dev/projects/orbit-v1-4.webp",
+          "https://r2.tfan2437.workers.dev/projects/orbit-v1-5.webp",
+        ],
         paragraphs: [],
         details: [
           {
@@ -896,7 +850,8 @@ export const PROJECTS_EN: Record<string, Project> = {
         name: "UI/UX Design",
         images: [
           "https://r2.tfan2437.workers.dev/projects/tovier-3.webp",
-          "https://r2.tfan2437.workers.dev/projects/tovier-4.webp",
+          "https://r2.tfan2437.workers.dev/projects/tovier-6.webp",
+          "https://r2.tfan2437.workers.dev/projects/tovier-5.webp",
         ],
         paragraphs: [],
         details: [

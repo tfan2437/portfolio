@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { duration, ease } from "@/constants/animation";
+import { duration, ease, delay } from "@/constants/animation";
 import { useProject, useTranslations } from "@/lib/store/useGlobal";
 import { Detail } from "@/types";
 import { twMerge } from "tailwind-merge";
@@ -20,6 +20,7 @@ const ProjectInfo = ({ name }: { name: string }) => {
         transition={{
           duration: duration,
           ease: ease,
+          delay: delay,
         }}
         className="w-full flex flex-col gap-16"
       >
@@ -216,10 +217,11 @@ const Images = ({
             key={index}
             src={path}
             alt={"project image"}
-            width={1200}
-            height={703}
+            width={900}
+            height={580}
             className="w-full h-auto rounded-lg"
             draggable={false}
+            quality={85}
           />
         ))}
       </div>
