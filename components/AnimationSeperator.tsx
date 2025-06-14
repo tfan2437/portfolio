@@ -30,7 +30,7 @@ const AnimationSeperator = () => {
           </div>
         </div>
         <Image
-          src="/mining-house.webp"
+          src="https://r2.tfan2437.workers.dev/projects/mining-house.webp"
           className="w-full h-full object-cover"
           alt="Mining House"
           width={1920}
