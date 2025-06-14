@@ -2,19 +2,20 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import NavLink from "@/components/NavLink";
+import NavLink from "@/components/ui/nav-link";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 
-import { useI18nStore, useTranslations } from "@/lib/store/useGlobal";
+import { useI18nStore, useTranslations } from "@/hooks/useGlobal";
 import { MenuIcon } from "lucide-react";
 
 const Navbar = () => {
   const path = usePathname();
-  const { locale, setLocale } = useI18nStore();
+
   const wording = useTranslations();
+  const { locale, setLocale } = useI18nStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLocaleChange = () => {
@@ -78,7 +79,7 @@ const Navbar = () => {
             className="bg-black group text-white pl-4 pr-6 py-1.5 rounded-full cursor-pointer flex items-center gap-2 hover:bg-green hover:text-black border-2 border-black transition-colors duration-300 select-none"
           >
             <Image
-              src="/icons/emoji-wavinghand.png"
+              src="/images/icons/emoji-wavinghand.png"
               alt="waving-hand"
               width={20}
               height={20}
@@ -132,4 +133,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;

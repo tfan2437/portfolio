@@ -1,8 +1,20 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 import React, { useEffect, useState } from "react";
-import { SparkleIcon } from "./sparkle-icon";
+import { SparkleIcon } from "@/components/icons/sparkle-icon";
+import { TECH_STACK } from "@/lib/constants";
+
+const InfiniteSkills = () => {
+  return (
+    <div className="h-auto w-full flex flex-col antialiased bg-black bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <InfiniteMovingCards items={TECH_STACK} direction="right" speed="slow" />
+    </div>
+  );
+};
+
+export default InfiniteSkills;
+
 export const InfiniteMovingCards = ({
   items,
   direction = "left",

@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { duration, ease, delay } from "@/constants/animation";
-import { useProject, useTranslations } from "@/lib/store/useGlobal";
+import { duration, ease, delay } from "@/lib/constants";
+import { useProject, useTranslations } from "@/hooks/useGlobal";
 import { Detail } from "@/types";
 import { twMerge } from "tailwind-merge";
 
@@ -103,7 +103,7 @@ const Intro = ({
           >
             <span className="font-semibold">{buttonText}</span>
             <Image
-              src={"/icons/link.png"}
+              src={"/images/icons/link.png"}
               alt="link"
               width={20}
               height={20}

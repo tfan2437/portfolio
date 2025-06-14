@@ -1,12 +1,12 @@
 "use client";
 
-import { InfiniteProjectCards } from "./InfiniteProjectCards";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
-import YoutubeIcon from "./icons/YoutubeIcon";
+import YoutubeIcon from "@/components/icons/youtube-icon";
+import InfiniteSkills from "@/components/ui/infinite-skills";
 
-const AnimationSeperator = () => {
+const AnimationSection = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -40,8 +40,8 @@ const AnimationSeperator = () => {
           draggable={false}
         />
       </div>
-      <InfiniteProjectCards />
+      <InfiniteSkills />
     </motion.div>
   );
 };
-export default AnimationSeperator;
+export default AnimationSection;

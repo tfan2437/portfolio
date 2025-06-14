@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "@/lib/store/useGlobal";
+import { useTranslations } from "@/hooks/useGlobal";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,7 +45,7 @@ const HeroSection = () => {
 
             <div className={twMerge(isHovering && "animate-wave")}>
               <Image
-                src="/icons/emoji-resume.png"
+                src="/images/icons/emoji-resume.png"
                 alt="resume"
                 width={16}
                 height={16}
@@ -57,4 +57,5 @@ const HeroSection = () => {
     </div>
   );
 };
+
 export default HeroSection;

@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { duration, ease, delay } from "@/constants/animation";
-import { PROJECTS_IMAGES } from "@/constants";
+import { PROJECTS_IMAGES, duration, ease, delay } from "@/lib/constants";
 
 const ProjectImage = ({ name }: { name: string }) => {
   const images = PROJECTS_IMAGES[name];

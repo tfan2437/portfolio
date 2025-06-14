@@ -3,9 +3,9 @@
 import { useRouter } from "next/navigation";
 import { motion } from "motion/react";
 import { useState } from "react";
-import type { ProjectItem } from "@/constants";
-import { PROJECTS_LIST } from "@/constants";
-import { useTranslations } from "@/lib/store/useGlobal";
+import type { ProjectItem } from "@/lib/constants";
+import { PROJECTS_LIST } from "@/lib/constants";
+import { useTranslations } from "@/hooks/useGlobal";
 import Image from "next/image";
 
 const ProjectsDisplay = () => {

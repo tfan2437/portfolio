@@ -2,9 +2,9 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import ProjectCard from "./ProjectCard";
-import { useTranslations } from "@/lib/store/useGlobal";
-import { PROJECTS_CARDS } from "@/constants";
+import ProjectCard from "@/components/project/project-card";
+import { useTranslations } from "@/hooks/useGlobal";
+import { PROJECTS_CARDS } from "@/lib/constants";
 
 const ProjectSection = () => {
   const label = useTranslations().label;

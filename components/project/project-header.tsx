@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { duration, ease, delay } from "@/constants/animation";
-import { useProject, useTranslations } from "@/lib/store/useGlobal";
+import { duration, ease, delay } from "@/lib/constants";
+import { useProject, useTranslations } from "@/hooks/useGlobal";
 
 const ProjectHeader = ({ name }: { name: string }) => {
   const { label } = useTranslations();

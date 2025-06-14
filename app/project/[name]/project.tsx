@@ -1,12 +1,12 @@
 "use client";
 
-import ProjectImage from "@/components/projects/ProjectImage";
-import ProjectInfo from "@/components/projects/ProjectInfo";
-import ProjectHeader from "@/components/projects/ProjectHeader";
-import ProjectsDisplay from "@/components/ProjectsDisplay";
+import ProjectImage from "@/components/project/project-images";
+import ProjectInfo from "@/components/project/project-info";
+import ProjectHeader from "@/components/project/project-header";
+import ProjectsDisplay from "@/components/project/project-list";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { validateName } from "@/lib/validate";
+import { validateName } from "@/lib/validations";
 
 const Project = () => {
   const params = useParams();

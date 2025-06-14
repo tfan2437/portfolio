@@ -1,20 +1,20 @@
 "use client";
 
-import { useTranslations, useI18nStore } from "@/lib/store/useGlobal";
+import { useTranslations, useI18nStore } from "@/hooks/useGlobal";
 import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/types";
 import { twMerge } from "tailwind-merge";
-import LinkedinIcon from "@/components/icons/LinkedinIcon";
+import LinkedinIcon from "@/components/icons/linkedin-icon";
 
 const AboutSection = () => {
   const { locale } = useI18nStore();
   const about = useTranslations().about;
 
   const SCHOOLS = [
-    "/icons/black-gatech.png",
-    "/icons/black-empire.png",
-    "/icons/black-cornell.png",
+    "/images/icons/black-gatech.png",
+    "/images/icons/black-empire.png",
+    "/images/icons/black-cornell.png",
   ];
 
   return (

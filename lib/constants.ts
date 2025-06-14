@@ -1,21 +1,12 @@
-export type ProjectItem = {
-  year: number;
-  name: string;
-  href: string;
-  link: string;
-  previews: string[];
+import { ProjectItemType, ProjectCardType } from "@/types";
+
+export const { duration, ease, delay } = {
+  duration: 1,
+  ease: "easeOut",
+  delay: 0.2,
 };
 
-export type ProjectCard = {
-  title: string;
-  name: string;
-  year: string;
-  description: string;
-  image: string;
-  link: string;
-};
-
-export const PROJECTS_LIST: ProjectItem[] = [
+export const PROJECTS_LIST: ProjectItemType[] = [
   {
     year: 2025,
     name: "Sonicfi",
@@ -119,7 +110,7 @@ export const PROJECTS_IMAGES: Record<string, string[]> = {
   ],
 };
 
-export const PROJECTS_CARDS: ProjectCard[] = [
+export const PROJECTS_CARDS: ProjectCardType[] = [
   {
     title: "Sonicfi Music",
     name: "sonicfi",
@@ -174,4 +165,37 @@ export const PROJECTS_CARDS: ProjectCard[] = [
     image: "https://r2.tfan2437.workers.dev/projects/orbit-v1-0.webp",
     link: "/project/orbit-v1",
   },
+];
+
+export const TECH_STACK = [
+  "Next.js",
+  "React",
+  "Node.js",
+  "Express",
+  "Spring Boot",
+  "MongoDB",
+  "PostgreSQL",
+  "TypeScript",
+  "JavaScript",
+  "Java",
+  "Python",
+  "AWS",
+  "Docker",
+  "Git",
+  "Tailwind CSS",
+  "Next.js",
+  "React",
+  "Node.js",
+  "Express",
+  "Spring Boot",
+  "MongoDB",
+  "PostgreSQL",
+  "TypeScript",
+  "JavaScript",
+  "Java",
+  "Python",
+  "AWS",
+  "Docker",
+  "Git",
+  "Tailwind CSS",
 ];

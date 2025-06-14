@@ -1,9 +1,9 @@
 "use client";
 
-import HeroSection from "@/components/HeroSection";
-import AnimationSeperator from "@/components/AnimationSeperator";
-import ProjectSection from "@/components/ProjectSection";
-import AboutSection from "@/components/AboutSection";
+import HeroSection from "@/components/sections/hero-section";
+import AnimationSection from "@/components/sections/animation-section";
+import ProjectSection from "@/components/sections/project-section";
+import AboutSection from "@/components/sections/about-section";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center w-full h-full">
       <HeroSection />
-      <AnimationSeperator />
+      <AnimationSection />
       <AboutSection />
       <ProjectSection />
     </div>

@@ -1,3 +1,22 @@
+// Project Data Types
+export type ProjectItemType = {
+  year: number;
+  name: string;
+  href: string;
+  link: string;
+  previews: string[];
+};
+
+export type ProjectCardType = {
+  title: string;
+  name: string;
+  year: string;
+  description: string;
+  image: string;
+  link: string;
+};
+
+// Translation Types
 export type Locale = "en" | "zh-TW";
 
 export type Translation = {
@@ -63,6 +82,7 @@ export type Translation = {
   };
 };
 
+// Project Translation Types
 export type Project = {
   href: string;
   type: string;
