@@ -2,19 +2,10 @@
 
 import Image from "next/image";
 import { ArrowUpRightIcon } from "lucide-react";
+import type { ProjectCardType } from "@/types";
 import Link from "next/link";
 
-const ProjectCard = ({
-  project,
-}: {
-  project: {
-    title: string;
-    year: string;
-    description: string;
-    image: string;
-    link: string;
-  };
-}) => {
+const ProjectCard = ({ project }: { project: ProjectCardType }) => {
   return (
     <Link
       href={project.link}
