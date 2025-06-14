@@ -7,9 +7,13 @@ import type { ProjectItemType } from "@/types";
 import { PROJECTS_LIST } from "@/lib/constants";
 import { useTranslations } from "@/hooks/useGlobal";
 import Image from "next/image";
+import { useDevice } from "@/hooks/useDevice";
+import { twMerge } from "tailwind-merge";
 
 const ProjectsDisplay = () => {
   const { label } = useTranslations();
+  const device = useDevice();
+
   return (
     <div
       id="projects"
@@ -26,7 +30,7 @@ const ProjectsDisplay = () => {
         </div>
         <div className="w-full flex flex-col select-none">
           {PROJECTS_LIST.map((project, index) => (
-            <ProjectItem key={index} project={project} />
+            <ProjectItem key={index} project={project} device={device} />
           ))}
         </div>
       </div>
@@ -35,7 +39,13 @@ const ProjectsDisplay = () => {
 };
 export default ProjectsDisplay;
 
-const ProjectItem = ({ project }: { project: ProjectItemType }) => {
+const ProjectItem = ({
+  project,
+  device,
+}: {
+  project: ProjectItemType;
+  device: "mobile" | "tablet" | "desktop";
+}) => {
   const router = useRouter();
   const [isHovering, setIsHovering] = useState(false);
 
@@ -54,17 +64,46 @@ const ProjectItem = ({ project }: { project: ProjectItemType }) => {
       className="w-full flex justify-between items-center cursor-pointer group border-t-2 border-black py-5 group"
     >
       <div className="w-full flex items-center gap-20 text-black">
-        <span className="">[{project.year}]</span>
-        <span className="font-medium text-2xl">{project.name}</span>
+        {device !== "mobile" && <span className="">[{project.year}]</span>}
+        <span className="font-medium lg:text-2xl text-lg">{project.name}</span>
       </div>
       <div className="flex items-center gap-2">
-        <div className="h-[160px] w-px" />
+        <div
+          className={twMerge(
+            "w-px",
+            device === "mobile" ? "h-auto" : "h-[160px]"
+          )}
+        />
 
-        {isHovering ? (
+        {isHovering && device !== "mobile" ? (
           <AnimatedSquares color={color} previews={project.previews} />
-        ) : (
+        ) : device !== "mobile" ? (
           <div className="h-[160px] w-auto flex items-center text-black font-medium whitespace-nowrap">
             {project.href}
+          </div>
+        ) : (
+          <div className="flex items-center justify-center">
+            <div className="flex gap-1.5">
+              {project.previews.slice(0, 2).map((preview, index) => (
+                <div
+                  key={index}
+                  className="size-22 rounded overflow-hidden"
+                  style={{
+                    backgroundColor: color,
+                  }}
+                >
+                  <Image
+                    src={preview}
+                    alt={"preview"}
+                    width={160}
+                    height={160}
+                    priority={false}
+                    quality={80}
+                    className="w-full h-full"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>

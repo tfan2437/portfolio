@@ -13,10 +13,13 @@ export const ZH_TW: Translation = {
   hero: {
     name: "范庭維",
     occupation: "軟體工程師",
-    greeting:
-      "嗨，我是庭維\n擅長全端開發與 AI 技術的軟體工程師\n幫助產品實現快速上線與優異的使用者體驗",
     driveLink:
       "https://drive.google.com/file/d/1zztIxa3wGbKI3FcqAulb7toyLO8Fo6_o/view?usp=sharing",
+    intro: [
+      "嗨！我是庭維\n專注於打造可擴展的 AI 應用，創造高影響力的網路平台\n致力於提供高效能、安全性與敏捷開發",
+      "嗨！我是庭維\n為 AI 平台打造穩健的網頁解決方案\n確保系統具備可擴展性、安全性與高效能",
+      "嗨！我是庭維\n專注於開發可擴展、高效能且安全的 AI 解決方案",
+    ],
   },
   about: {
     me: {

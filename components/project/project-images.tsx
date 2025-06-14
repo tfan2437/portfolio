@@ -46,7 +46,7 @@ const ProjectImage = ({ name }: { name: string }) => {
             />
           </div>
 
-          <div className="w-full aspect-5/3 overflow-hidden rounded-lg hidden sm:block bg-black">
+          <div className="w-full aspect-5/3 overflow-hidden rounded-lg bg-black">
             <Image
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               src={images[2]}

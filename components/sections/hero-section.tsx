@@ -1,5 +1,6 @@
 "use client";
 
+import { useDevice } from "@/hooks/useDevice";
 import { useTranslations } from "@/hooks/useGlobal";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -9,8 +10,9 @@ import { twMerge } from "tailwind-merge";
 
 const HeroSection = () => {
   const wording = useTranslations();
-
   const [isHovering, setIsHovering] = useState(false);
+
+  const device = useDevice();
 
   return (
     <div id="hero" className="flex flex-col responsive my-40 md:my-60">
@@ -19,8 +21,12 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeIn" }}
       >
-        <p className="text-4xl font-semibold leading-12 whitespace-pre-line select-none">
-          {wording.hero.greeting}
+        <p className="text-2xl lg:text-4xl font-semibold lg:leading-12 whitespace-pre-line select-none">
+          {device === "desktop"
+            ? wording.hero.intro[0]
+            : device === "tablet"
+            ? wording.hero.intro[1]
+            : wording.hero.intro[2]}
         </p>
       </motion.div>
 

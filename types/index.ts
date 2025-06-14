@@ -32,8 +32,8 @@ export type Translation = {
   hero: {
     name: string;
     occupation: string;
-    greeting: string;
     driveLink: string;
+    intro: string[];
   };
   about: {
     me: {

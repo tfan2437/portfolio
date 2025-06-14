@@ -10,8 +10,8 @@ export const useDevice = () => {
   useEffect(() => {
     const getDevice = () => {
       const width = window.innerWidth;
-      if (width >= 1200) return "desktop";
-      if (width >= 600) return "tablet";
+      if (width >= 1300) return "desktop";
+      if (width >= 1000) return "tablet";
       return "mobile";
     };
 

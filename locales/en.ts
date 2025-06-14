@@ -13,10 +13,13 @@ export const EN: Translation = {
   hero: {
     name: "Ting Wei Fan",
     occupation: "Software Engineer",
-    greeting:
-      "Hey there! I am Ting Wei\nA fullstack engineer who turns ideas into scalable web apps\nBlending performance, design, and usability",
     driveLink:
       "https://drive.google.com/file/d/1zztIxa3wGbKI3FcqAulb7toyLO8Fo6_o/view?usp=sharing",
+    intro: [
+      "Hi there! I'm Ting Wei\nEngineering robust, scalable web solutions for high-impact platforms\nEnsuring high performance, security, and agile collaboration",
+      "Hi there! I'm Ting Wei\nCrafting robust web solutions for global platforms\nEnsuring scalability, security, and performance",
+      "Hi there! I'm Ting Wei\nEngineering scalable, high-performance, secure AI solutions",
+    ],
   },
   about: {
     me: {
