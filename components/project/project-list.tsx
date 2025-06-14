@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { motion } from "motion/react";
 import { useState } from "react";
-import type { ProjectItem } from "@/lib/constants";
+import type { ProjectItemType } from "@/types";
 import { PROJECTS_LIST } from "@/lib/constants";
 import { useTranslations } from "@/hooks/useGlobal";
 import Image from "next/image";
@@ -35,7 +35,7 @@ const ProjectsDisplay = () => {
 };
 export default ProjectsDisplay;
 
-const ProjectItem = ({ project }: { project: ProjectItem }) => {
+const ProjectItem = ({ project }: { project: ProjectItemType }) => {
   const router = useRouter();
   const [isHovering, setIsHovering] = useState(false);
 
